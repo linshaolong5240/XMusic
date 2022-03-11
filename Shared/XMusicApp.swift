@@ -9,12 +9,46 @@ import SwiftUI
 
 @main
 struct XMusicApp: App {
-    let persistenceController = PersistenceController.shared
+    @Environment(\.scenePhase) private var scenePhase
+    #if canImport(UIKit)
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate: AppDelegate
+    #endif
+    @StateObject var store = Store.shared
+    @StateObject var player = Player.shared
+    let context = DataManager.shared.context()
+//    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onAppear {
+                    store.dispatch(.loginRefreshRequest)
+                }
+                .environmentObject(store)
+                .environmentObject(player)
+                .environment(\.managedObjectContext, context)
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onChange(of: scenePhase) { newValue in
+                    switch newValue {
+                    case .active:
+                        break
+                    case .background:
+                        break
+                    case .inactive:
+                        break
+                    @unknown default:
+                        break
+                    }
+                }
         }
     }
 }
+
+#if canImport(UIKit)
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+        AudioSessionManager.shared.configuration()
+        return true
+    }
+}
+#endif
