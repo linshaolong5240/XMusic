@@ -1,5 +1,5 @@
 //
-//  AppAction.swift
+//  XMAppAction.swift
 //  XMusic
 //
 //  Created by teenloong on 2022/3/12.
@@ -9,7 +9,7 @@
 import Foundation
 import NeteaseCloudMusicAPI
 
-enum AppAction {
+enum XMAppAction {
     case initAction
     case InitMPRemoteControl
     case albumDetailRequest(id: Int)
