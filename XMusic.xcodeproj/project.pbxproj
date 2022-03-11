@@ -275,18 +275,17 @@
 		44E4EE3927DBD3BC00C2803E /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				44E4EF3C27DBDF4B00C2803E /* DataModel */,
-				44E4EEC827DBDD9400C2803E /* ViewModel */,
-				44E4EEAC27DBDD8800C2803E /* View */,
-				44E4EEA227DBDD7400C2803E /* Helper */,
-				44E4EE8927DBDD6100C2803E /* Extension */,
-				44E4EE7927DBDCF500C2803E /* State */,
-				44E4EE6627DBDB3500C2803E /* Model */,
-				44E4EE3C27DBD3BC00C2803E /* XMusicApp.swift */,
 				44E4EE3D27DBD3BC00C2803E /* ContentView.swift */,
 				44E4EE3E27DBD3BC00C2803E /* Persistence.swift */,
+				44E4EE3C27DBD3BC00C2803E /* XMusicApp.swift */,
 				44E4EE3F27DBD3BC00C2803E /* Assets.xcassets */,
-				44E4EE5F27DBD46200C2803E /* DataModel.xcdatamodeld */,
+				44E4EF3C27DBDF4B00C2803E /* DataModel */,
+				44E4EE8927DBDD6100C2803E /* Extension */,
+				44E4EEA227DBDD7400C2803E /* Helper */,
+				44E4EE6627DBDB3500C2803E /* Model */,
+				44E4EE7927DBDCF500C2803E /* State */,
+				44E4EEAC27DBDD8800C2803E /* View */,
+				44E4EEC827DBDD9400C2803E /* ViewModel */,
 				44E4EE3A27DBD3BC00C2803E /* XMusic.xcdatamodeld */,
 			);
 			path = Shared;
@@ -450,6 +449,7 @@
 		44E4EF3C27DBDF4B00C2803E /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				44E4EE5F27DBD46200C2803E /* DataModel.xcdatamodeld */,
 				44E4EF3E27DBDF5E00C2803E /* CoreDataModel.swift */,
 				44E4EF3D27DBDF5E00C2803E /* DataManager.swift */,
 			);
