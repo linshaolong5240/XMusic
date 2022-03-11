@@ -26,7 +26,6 @@
 		44E4EE6F27DBDB4C00C2803E /* QinSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE6927DBDB4C00C2803E /* QinSong.swift */; };
 		44E4EE7027DBDB4C00C2803E /* QinSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE6927DBDB4C00C2803E /* QinSong.swift */; };
 		44E4EE7127DBDB4C00C2803E /* AudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE6A27DBDB4C00C2803E /* AudioSessionManager.swift */; };
-		44E4EE7227DBDB4C00C2803E /* AudioSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE6A27DBDB4C00C2803E /* AudioSessionManager.swift */; };
 		44E4EE7527DBDB7300C2803E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EE7427DBDB7300C2803E /* Kingfisher */; };
 		44E4EE7827DBDCCE00C2803E /* NeteaseCloudMusicAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EE7727DBDCCE00C2803E /* NeteaseCloudMusicAPI */; };
 		44E4EE7F27DBDD3C00C2803E /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7A27DBDD3C00C2803E /* AppAction.swift */; };
@@ -92,7 +91,6 @@
 		44E4EED927DBDE3B00C2803E /* PlaylistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EECE27DBDE3B00C2803E /* PlaylistViewModel.swift */; };
 		44E4EEDA27DBDE3B00C2803E /* PlaylistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EECE27DBDE3B00C2803E /* PlaylistViewModel.swift */; };
 		44E4EEDE27DBDE7D00C2803E /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEDD27DBDE7D00C2803E /* UIDevice+Extension.swift */; };
-		44E4EEDF27DBDE7D00C2803E /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEDD27DBDE7D00C2803E /* UIDevice+Extension.swift */; };
 		44E4EEFD27DBDE9700C2803E /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE127DBDE9600C2803E /* ViewModifier.swift */; };
 		44E4EEFE27DBDE9700C2803E /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE127DBDE9600C2803E /* ViewModifier.swift */; };
 		44E4EEFF27DBDE9700C2803E /* QinSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE227DBDE9600C2803E /* QinSearchView.swift */; };
@@ -156,6 +154,9 @@
 		44E4EF4027DBDF5F00C2803E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF3D27DBDF5E00C2803E /* DataManager.swift */; };
 		44E4EF4127DBDF5F00C2803E /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF3E27DBDF5E00C2803E /* CoreDataModel.swift */; };
 		44E4EF4227DBDF5F00C2803E /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF3E27DBDF5E00C2803E /* CoreDataModel.swift */; };
+		44E4EF4727DBEBD600C2803E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4627DBEBD600C2803E /* Kingfisher */; };
+		44E4EF4927DBEBD900C2803E /* NeteaseCloudMusicAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4827DBEBD900C2803E /* NeteaseCloudMusicAPI */; };
+		44E4EF4B27DBEBDC00C2803E /* NeumorphismSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4A27DBEBDC00C2803E /* NeumorphismSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -254,6 +255,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E4EF4727DBEBD600C2803E /* Kingfisher in Frameworks */,
+				44E4EF4927DBEBD900C2803E /* NeteaseCloudMusicAPI in Frameworks */,
+				44E4EF4B27DBEBDC00C2803E /* NeumorphismSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +273,7 @@
 				44E4EEDB27DBDE6200C2803E /* iOS */,
 				44E4EE4B27DBD3BC00C2803E /* macOS */,
 				44E4EE4527DBD3BC00C2803E /* Products */,
+				44E4EF4527DBEBD600C2803E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -456,6 +461,13 @@
 			path = DataModel;
 			sourceTree = "<group>";
 		};
+		44E4EF4527DBEBD600C2803E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -494,6 +506,11 @@
 			dependencies = (
 			);
 			name = "XMusic (macOS)";
+			packageProductDependencies = (
+				44E4EF4627DBEBD600C2803E /* Kingfisher */,
+				44E4EF4827DBEBD900C2803E /* NeteaseCloudMusicAPI */,
+				44E4EF4A27DBEBDC00C2803E /* NeumorphismSwiftUI */,
+			);
 			productName = "XMusic (macOS)";
 			productReference = 44E4EE4A27DBD3BC00C2803E /* XMusic.app */;
 			productType = "com.apple.product-type.application";
@@ -654,7 +671,6 @@
 				44E4EF2827DBDE9700C2803E /* DiscoverPlaylistView.swift in Sources */,
 				44E4EF0427DBDE9700C2803E /* TestView.swift in Sources */,
 				44E4EEBD27DBDD9100C2803E /* QinPlayerCoverView.swift in Sources */,
-				44E4EE7227DBDB4C00C2803E /* AudioSessionManager.swift in Sources */,
 				44E4EEB727DBDD9100C2803E /* QinBackwardButton.swift in Sources */,
 				44E4EF1627DBDE9700C2803E /* LyricView.swift in Sources */,
 				44E4EF2427DBDE9700C2803E /* FetchedMVDetailView.swift in Sources */,
@@ -695,7 +711,6 @@
 				44E4EE8027DBDD3C00C2803E /* AppAction.swift in Sources */,
 				44E4EED227DBDE3B00C2803E /* SongViewModel.swift in Sources */,
 				44E4EEBF27DBDD9100C2803E /* QinNavigationBarTitleView.swift in Sources */,
-				44E4EEDF27DBDE7D00C2803E /* UIDevice+Extension.swift in Sources */,
 				44E4EEA927DBDD7D00C2803E /* SwiftUIHelper.swift in Sources */,
 				44E4EF1A27DBDE9700C2803E /* CreatedPlaylistView.swift in Sources */,
 				44E4EE8227DBDD3C00C2803E /* AppError.swift in Sources */,
@@ -845,6 +860,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D6NGHAR2FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "XMusic--iOS--Info.plist";
@@ -876,6 +892,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D6NGHAR2FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "XMusic--iOS--Info.plist";
@@ -907,9 +924,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D6NGHAR2FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "XMusic--macOS--Info.plist";
@@ -934,9 +953,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D6NGHAR2FG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "XMusic--macOS--Info.plist";
@@ -1026,6 +1047,21 @@
 			productName = NeteaseCloudMusicAPI;
 		};
 		44E4EF3A27DBDF2D00C2803E /* NeumorphismSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44E4EF3927DBDF2D00C2803E /* XCRemoteSwiftPackageReference "NeumorphismSwiftUI" */;
+			productName = NeumorphismSwiftUI;
+		};
+		44E4EF4627DBEBD600C2803E /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44E4EE7327DBDB7300C2803E /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		44E4EF4827DBEBD900C2803E /* NeteaseCloudMusicAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44E4EE7627DBDCCE00C2803E /* XCRemoteSwiftPackageReference "NeteaseCloudMusicAPI" */;
+			productName = NeteaseCloudMusicAPI;
+		};
+		44E4EF4A27DBEBDC00C2803E /* NeumorphismSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 44E4EF3927DBDF2D00C2803E /* XCRemoteSwiftPackageReference "NeumorphismSwiftUI" */;
 			productName = NeumorphismSwiftUI;
