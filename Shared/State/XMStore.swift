@@ -29,9 +29,9 @@ class XMStore: ObservableObject {
         }
     }
     
-    func reduce(state: XMAppState, action: AppAction) -> (XMAppState, AppCommand?) {
+    func reduce(state: XMAppState, action: AppAction) -> (XMAppState, XMAppCommand?) {
         var appState = state
-        var appCommand: AppCommand? = nil
+        var appCommand: XMAppCommand? = nil
         
         switch action {
         case .initAction:

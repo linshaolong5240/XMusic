@@ -34,8 +34,8 @@
 		44E4EE8227DBDD3C00C2803E /* XMAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7B27DBDD3C00C2803E /* XMAppError.swift */; };
 		44E4EE8327DBDD3C00C2803E /* XMAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */; };
 		44E4EE8427DBDD3C00C2803E /* XMAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */; };
-		44E4EE8527DBDD3C00C2803E /* AppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */; };
-		44E4EE8627DBDD3C00C2803E /* AppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */; };
+		44E4EE8527DBDD3C00C2803E /* XMAppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7D27DBDD3C00C2803E /* XMAppCommand.swift */; };
+		44E4EE8627DBDD3C00C2803E /* XMAppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7D27DBDD3C00C2803E /* XMAppCommand.swift */; };
 		44E4EE8727DBDD3C00C2803E /* XMStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7E27DBDD3C00C2803E /* XMStore.swift */; };
 		44E4EE8827DBDD3C00C2803E /* XMStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7E27DBDD3C00C2803E /* XMStore.swift */; };
 		44E4EE9227DBDD6C00C2803E /* Published+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE8A27DBDD6C00C2803E /* Published+Extension.swift */; };
@@ -177,7 +177,7 @@
 		44E4EE7A27DBDD3C00C2803E /* AppAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		44E4EE7B27DBDD3C00C2803E /* XMAppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMAppError.swift; sourceTree = "<group>"; };
 		44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMAppState.swift; sourceTree = "<group>"; };
-		44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCommand.swift; sourceTree = "<group>"; };
+		44E4EE7D27DBDD3C00C2803E /* XMAppCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMAppCommand.swift; sourceTree = "<group>"; };
 		44E4EE7E27DBDD3C00C2803E /* XMStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMStore.swift; sourceTree = "<group>"; };
 		44E4EE8A27DBDD6C00C2803E /* Published+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Published+Extension.swift"; sourceTree = "<group>"; };
 		44E4EE8B27DBDD6C00C2803E /* CaseIterable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CaseIterable+Extension.swift"; sourceTree = "<group>"; };
@@ -330,7 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				44E4EE7A27DBDD3C00C2803E /* AppAction.swift */,
-				44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */,
+				44E4EE7D27DBDD3C00C2803E /* XMAppCommand.swift */,
 				44E4EE7B27DBDD3C00C2803E /* XMAppError.swift */,
 				44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */,
 				44E4EE7E27DBDD3C00C2803E /* XMStore.swift */,
@@ -647,7 +647,7 @@
 				44E4EF3727DBDEA800C2803E /* CommentBarView.swift in Sources */,
 				44E4EF0D27DBDE9700C2803E /* DescriptionView.swift in Sources */,
 				44E4EEFF27DBDE9700C2803E /* QinSearchView.swift in Sources */,
-				44E4EE8527DBDD3C00C2803E /* AppCommand.swift in Sources */,
+				44E4EE8527DBDD3C00C2803E /* XMAppCommand.swift in Sources */,
 				44E4EF3327DBDE9700C2803E /* ArtistSublistView.swift in Sources */,
 				44E4EECF27DBDE3B00C2803E /* LyricViewModel.swift in Sources */,
 				44E4EE5127DBD3BC00C2803E /* ContentView.swift in Sources */,
@@ -724,7 +724,7 @@
 				44E4EF3827DBDEA800C2803E /* CommentBarView.swift in Sources */,
 				44E4EF0E27DBDE9700C2803E /* DescriptionView.swift in Sources */,
 				44E4EF0027DBDE9700C2803E /* QinSearchView.swift in Sources */,
-				44E4EE8627DBDD3C00C2803E /* AppCommand.swift in Sources */,
+				44E4EE8627DBDD3C00C2803E /* XMAppCommand.swift in Sources */,
 				44E4EF3427DBDE9700C2803E /* ArtistSublistView.swift in Sources */,
 				44E4EED027DBDE3B00C2803E /* LyricViewModel.swift in Sources */,
 				44E4EE5227DBD3BC00C2803E /* ContentView.swift in Sources */,
