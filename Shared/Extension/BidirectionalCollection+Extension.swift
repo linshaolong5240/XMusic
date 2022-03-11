@@ -3,6 +3,7 @@
 //  XMusic
 //
 //  Created by teenloong on 2022/3/12.
+//  Copyright © 2022 com.teenloong. All rights reserved.
 //
 
 import Foundation
