@@ -24,9 +24,9 @@ class QinSongRowViewModel: ObservableObject {
     
     private func config() {
         let songId = song.id
-        Store.shared.appState.playlist.$songlikedIds.map { $0.contains(songId) }.assign(to: &$like)
-        Store.shared.appState.playing.$song.map { $0?.id == songId }.assign(to: &$playing)
-        Publishers.CombineLatest(Player.shared.$isPlaying, Store.shared.appState.playing.$song).map { playing, song in
+        XMStore.shared.appState.playlist.$songlikedIds.map { $0.contains(songId) }.assign(to: &$like)
+        XMStore.shared.appState.playing.$song.map { $0?.id == songId }.assign(to: &$playing)
+        Publishers.CombineLatest(Player.shared.$isPlaying, XMStore.shared.appState.playing.$song).map { playing, song in
             playing && song?.id == songId
         }.assign(to: &$isPlaying)
     }
@@ -36,7 +36,7 @@ class QinSongRowViewModel: ObservableObject {
     }
     
     func togglePlay() {
-        Store.shared.dispatch(.playerTogglePlay(song: song))
+        XMStore.shared.dispatch(.playerTogglePlay(song: song))
     }
 }
 

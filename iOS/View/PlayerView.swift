@@ -31,8 +31,8 @@ class PlayerViewModel: ObservableObject {
             displayMode = .stand
         }else if displayMode == .stand {
             displayMode = .lyric
-            if let id = Store.shared.appState.playing.song?.id {
-                Store.shared.dispatch(.songlyricRequest(id: id))
+            if let id = XMStore.shared.appState.playing.song?.id {
+                XMStore.shared.dispatch(.songlyricRequest(id: id))
             }
         }
     }
@@ -43,7 +43,7 @@ class PlayerViewModel: ObservableObject {
 }
 
 struct PlayerView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: XMStore
     @StateObject var viewModel: PlayerViewModel = .init()
     
     private var playing: AppState.Playing { store.appState.playing }
@@ -70,7 +70,7 @@ struct PlayerView: View {
                             Button {
                                 let id = Int(playing.song?.id ?? 0)
                                 let like = !playlist.songlikedIds.contains(id)
-                                Store.shared.dispatch(.songLikeRequest(id: id, like: like))
+                                XMStore.shared.dispatch(.songLikeRequest(id: id, like: like))
                             } label: {
                                 let imageName = playlist.songlikedIds.contains(Int(playing.song?.id ?? 0)) ? "heart.fill" : "heart"
                                 QinSFView(systemName: imageName, size: .medium)
@@ -149,7 +149,7 @@ struct PlayingView_Previews: PreviewProvider {
         //            .environment(\.managedObjectContext, DataManager.shared.context())
         PlayerView()
             .preferredColorScheme(.dark)
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
             .environmentObject(Player.shared)
             .environment(\.managedObjectContext, DataManager.shared.context())
         
@@ -183,7 +183,7 @@ struct PlayerNavgationBarView: View {
 }
 
 struct PlayerControllView: View {
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     @EnvironmentObject private var player: Player
     @ObservedObject var viewModel: PlayerViewModel
     private var playing: AppState.Playing { store.appState.playing }
@@ -198,7 +198,7 @@ struct PlayerControllView: View {
                 Text(String(format: "%02d:%02d", Int(player.loadTime/60),Int(player.loadTime)%60))
                     .frame(width: 50, alignment: Alignment.leading)
                 Slider(value: $player.loadTime, in: 0...(player.totalTime > 0 ? player.totalTime : 1.0), onEditingChanged: { (isEdit) in
-                    Store.shared.dispatch(.playerSeek(isSeeking: isEdit, time: player.loadTime)
+                    XMStore.shared.dispatch(.playerSeek(isSeeking: isEdit, time: player.loadTime)
                     )
                 })
                     .modifier(NEUShadow())
@@ -209,7 +209,7 @@ struct PlayerControllView: View {
             .foregroundColor(Color.secondTextColor)
             HStack(spacing: 40) {
                 Button(action: {
-                    Store.shared.dispatch(.playerPlayBackward)
+                    XMStore.shared.dispatch(.playerPlayBackward)
                 }) {
                     QinSFView(systemName: "backward.fill", size: .big
                     )
@@ -221,11 +221,11 @@ struct PlayerControllView: View {
                     )
                     .onTapGesture {
                         if let song = store.appState.playing.song {
-                            Store.shared.dispatch(.playerTogglePlay(song: song))
+                            XMStore.shared.dispatch(.playerTogglePlay(song: song))
                         }
                     }
                 Button(action: {
-                    Store.shared.dispatch(.playerPlayForward)
+                    XMStore.shared.dispatch(.playerPlayForward)
                 }) {
                     QinSFView(systemName: "forward.fill", size: .big)
                 }
@@ -319,11 +319,11 @@ struct PlaylistTracksView: View {
             ScrollView {
                 LazyVStack{
                     ForEach(playlist){ item in
-                        if Store.shared.appState.playlist.createdPlaylistIds.contains(item.id) && item.id != Store.shared.appState.playlist.likedPlaylistId {
+                        if XMStore.shared.appState.playlist.createdPlaylistIds.contains(item.id) && item.id != XMStore.shared.appState.playlist.likedPlaylistId {
                             Button(action: {
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                    if let songId = Store.shared.appState.playing.song?.id {
-                                        Store.shared.dispatch(.playlistTracksRequest(pid: item.id, ids: [Int(songId)], op: true))
+                                    if let songId = XMStore.shared.appState.playing.song?.id {
+                                        XMStore.shared.dispatch(.playlistTracksRequest(pid: item.id, ids: [Int(songId)], op: true))
                                     }
                                 }
                                 withAnimation(.default){
@@ -342,7 +342,7 @@ struct PlaylistTracksView: View {
 }
 
 struct PlayingExtensionControllView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: XMStore
     
     private var settings: AppState.Settings { store.appState.settings }
     
@@ -356,7 +356,7 @@ struct PlayingExtensionControllView: View {
             }
             
             Button(action: {
-                Store.shared.dispatch(.playerPlayMode)
+                XMStore.shared.dispatch(.playerPlayMode)
             }) {
                 QinSFView(systemName: settings.playMode.systemName, size: .small, inactiveColor: Color.secondTextColor)
             }
@@ -366,7 +366,7 @@ struct PlayingExtensionControllView: View {
 }
 
 struct PlayerCoverView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: XMStore
     private var playing: AppState.Playing { store.appState.playing }
     private var settings: AppState.Settings { store.appState.settings }
     

@@ -45,7 +45,7 @@ class Player: AVPlayer, ObservableObject {
         #endif
         super.play()
         self.addPeriodicTimeObserver()
-        Store.shared.dispatch(.updateMPNowPlayingInfo)
+        XMStore.shared.dispatch(.updateMPNowPlayingInfo)
     }
     func playWithURL(url: URL) {
         self.removePeriodicTimeObserver()
@@ -78,7 +78,7 @@ class Player: AVPlayer, ObservableObject {
         let cmtime = CMTime(seconds: seconds, preferredTimescale: 600)
         super.seek(to: cmtime)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {//在global 会出错,在main中更新UI状态
-            Store.shared.dispatch(.updateMPNowPlayingInfo)//seek 后 AVPlayer 的当前时间获取有延迟
+            XMStore.shared.dispatch(.updateMPNowPlayingInfo)//seek 后 AVPlayer 的当前时间获取有延迟
         }
     }
     
@@ -95,7 +95,7 @@ class Player: AVPlayer, ObservableObject {
             .publish(every: 0.1, on: .main, in: .default)
             .autoconnect()
             .sink(receiveValue: { _ in
-                let store = Store.shared
+                let store = XMStore.shared
                 let player = Player.shared
                 if !store.appState.playing.isSeeking {
                     let loadTime = player.currentTime().seconds

@@ -10,7 +10,7 @@ import NeumorphismSwiftUI
 import NeteaseCloudMusicAPI
 
 struct PlaylistManageView: View {
-    let playlist = Store.shared.appState.playlist.userPlaylist
+    let playlist = XMStore.shared.appState.playlist.userPlaylist
     @State private var editMode: EditMode = .active
     @Binding var showSheet: Bool
     @State private var ids = [Int]()
@@ -27,7 +27,7 @@ struct PlaylistManageView: View {
                     Button(action: {
                         showSheet.toggle()
                         if isMoved {
-                            Store.shared.dispatch(.playlistOrderUpdateRequesting(ids: ids))
+                            XMStore.shared.dispatch(.playlistOrderUpdateRequesting(ids: ids))
                         }
                     }, label: {
                         QinSFView(systemName: "checkmark", size: .medium)
@@ -53,7 +53,7 @@ struct PlaylistManageView: View {
         }
         .alert(isPresented: $isDeleted) {
             Alert(title: Text("删除歌单"), message: Text("确定删除歌单"), primaryButton: Alert.Button.cancel(Text("取消")), secondaryButton: Alert.Button.destructive(Text("删除"),action: {
-                Store.shared.dispatch(.playlistDeleteRequest(pid: Int(deleteId)))
+                XMStore.shared.dispatch(.playlistDeleteRequest(pid: Int(deleteId)))
             }))
         }
     }

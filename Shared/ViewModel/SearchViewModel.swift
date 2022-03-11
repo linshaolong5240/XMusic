@@ -65,12 +65,12 @@ class SearchViewModel: ObservableObject {
     private func SearchSongRequest(key: String, type: NCMSearchType) {
         NCM.requestPublisher(action: NCMSearchSongAction(Info: .init(searchKey: key, type: type, limit: limit, offset: offset * limit))).sink { completion in
             if case .failure(let error) = completion {
-                Store.shared.dispatch(.error(.error(error)))
+                XMStore.shared.dispatch(.error(.error(error)))
             }
         } receiveValue: {[weak self] response in
             guard let weakSelf = self else { return }
             guard response.isSuccess, let result = response.result else {
-                Store.shared.dispatch(.error(.neteaseCloudMusic(code: response.code, message: response.message)))
+                XMStore.shared.dispatch(.error(.neteaseCloudMusic(code: response.code, message: response.message)))
                 return
             }
             weakSelf.result = .init(songs: result.songs?.map(QinSong.init) ?? [], hasMore: result.hasMore ?? false)

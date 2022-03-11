@@ -12,7 +12,7 @@ import NeumorphismSwiftUI
 struct PlayerControlBarView: View, NEUStyle {
     
     @Environment(\.colorScheme) private var colorScheme
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     @EnvironmentObject private var player: Player
     
     private var playing: AppState.Playing { store.appState.playing }
@@ -29,7 +29,7 @@ struct PlayerControlBarView: View, NEUStyle {
                     .frame(width: 90, height: 90)
                 Button(action: {
                     if let song = store.appState.playing.song {
-                        Store.shared.dispatch(.playerTogglePlay(song: song))
+                        XMStore.shared.dispatch(.playerTogglePlay(song: song))
                     }
                 }) {
                     QinSFView(systemName: player.isPlaying ? "pause" : "play.fill", size: .small, active: true)
@@ -61,7 +61,7 @@ struct PlayerControlBarView: View, NEUStyle {
                 }
             }
             Button(action: {
-                Store.shared.dispatch(.playerPlayForward)
+                XMStore.shared.dispatch(.playerPlayForward)
             }) {
                 QinSFView(systemName: "forward.fill", size: .medium)
             }
@@ -88,7 +88,7 @@ struct BottomBarView_Previews: PreviewProvider {
             }
         }
         .edgesIgnoringSafeArea(.bottom)
-        .environmentObject(Store.shared)
+        .environmentObject(XMStore.shared)
         .environmentObject(Player.shared)
         .environment(\.colorScheme, .light)
         ZStack {
@@ -99,7 +99,7 @@ struct BottomBarView_Previews: PreviewProvider {
             }
         }
         .edgesIgnoringSafeArea(.bottom)
-        .environmentObject(Store.shared)
+        .environmentObject(XMStore.shared)
         .environmentObject(Player.shared)
         .environment(\.colorScheme, .dark)
     }

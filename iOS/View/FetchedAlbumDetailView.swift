@@ -30,13 +30,13 @@ struct  FetchedAlbumDetailView: View {
                             AlbumDetailView(album: album)
                                 .onAppear {
                                     if album.songsId == nil {
-                                        Store.shared.dispatch(.albumDetailRequest(id: Int(id)))
+                                        XMStore.shared.dispatch(.albumDetailRequest(id: Int(id)))
                                     }
                                 }
                         }else {
                             Text("正在加载")
                                 .onAppear {
-                                    Store.shared.dispatch(.albumDetailRequest(id: Int(id)))
+                                    XMStore.shared.dispatch(.albumDetailRequest(id: Int(id)))
                                 }
                             Spacer()
                         }
@@ -60,7 +60,7 @@ struct AlbumDetailView_Previews: PreviewProvider {
 #endif
 
 struct AlbumDetailView: View {
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     @ObservedObject var album: Album
     
     var body: some View {
@@ -72,8 +72,8 @@ struct AlbumDetailView: View {
                 Spacer()
                 Button(action: {
                     let id = album.id
-                    let sub = !Store.shared.appState.album.subedIds.contains(Int(id))
-                    Store.shared.dispatch(.albumSubRequest(id: Int(id), sub: sub))
+                    let sub = !XMStore.shared.appState.album.subedIds.contains(Int(id))
+                    XMStore.shared.dispatch(.albumSubRequest(id: Int(id), sub: sub))
                 }) {
                     QinSFView(systemName: store.appState.album.subedIds.contains(Int(album.id)) ? "heart.fill" : "heart",
                               size: .small)

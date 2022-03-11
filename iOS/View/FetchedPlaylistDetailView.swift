@@ -34,7 +34,7 @@ struct FetchedPlaylistDetailView: View {
                             Text("正在加载")
                                 .onAppear {
                                     print(results)
-                                    Store.shared.dispatch(.playlistDetailRequest(id: id))
+                                    XMStore.shared.dispatch(.playlistDetailRequest(id: id))
                                 }
                             Spacer()
                         }
@@ -58,7 +58,7 @@ struct PlaylistDetailView_Previews: PreviewProvider {
                 FetchedPlaylistDetailView(id: 0)
             }
         }
-        .environmentObject(Store.shared)
+        .environmentObject(XMStore.shared)
         .environmentObject(Player.shared)
         .preferredColorScheme(.light)
     }
@@ -66,7 +66,7 @@ struct PlaylistDetailView_Previews: PreviewProvider {
 #endif
 
 struct PlaylistDetailView: View {
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     private var subedPlaylistIDs: [Int] { store.appState.playlist.subedPlaylistIds }
     @ObservedObject var playlist :Playlist
     @State private var showPlaylistSongsManage: Bool = false
@@ -78,13 +78,13 @@ struct PlaylistDetailView: View {
                 Text("id:\(String(playlist.id))")
                     .foregroundColor(.secondTextColor)
                 Spacer()
-                if !Store.shared.appState.playlist.createdPlaylistIds.contains(Int(playlist.id)) {
+                if !XMStore.shared.appState.playlist.createdPlaylistIds.contains(Int(playlist.id)) {
                     Button(action: {
                         let id = playlist.id
                         let sub = !subedPlaylistIDs.contains(Int(id))
-                        Store.shared.dispatch(.playlistSubscibeRequest(id: Int(id), sub: sub))
+                        XMStore.shared.dispatch(.playlistSubscibeRequest(id: Int(id), sub: sub))
                     }) {
-                        QinSFView(systemName: Store.shared.appState.playlist.userPlaylistIds.contains(Int(playlist.id)) ? "heart.fill" : "heart",
+                        QinSFView(systemName: XMStore.shared.appState.playlist.userPlaylistIds.contains(Int(playlist.id)) ? "heart.fill" : "heart",
                                   size: .small)
                     }
                     .buttonStyle(NEUDefaultButtonStyle(shape: Circle()))
@@ -134,16 +134,16 @@ struct CommonNavigationBarView: View {
             Button(action: {
                 switch type {
                 case .album:
-                    Store.shared.dispatch(.albumDetailRequest(id: id))
+                    XMStore.shared.dispatch(.albumDetailRequest(id: id))
                 case .artist:
-                    Store.shared.dispatch(.artistDetailRequest(id: id))
+                    XMStore.shared.dispatch(.artistDetailRequest(id: id))
                 case .mv:
-                    Store.shared.dispatch(.mvDetailRequest(id: id))
+                    XMStore.shared.dispatch(.mvDetailRequest(id: id))
                 case .playlist:
                     if id == 0 {
-                        Store.shared.dispatch(.recommendSongsRequest)
+                        XMStore.shared.dispatch(.recommendSongsRequest)
                     } else {
-                        Store.shared.dispatch(.playlistDetailRequest(id: id))
+                        XMStore.shared.dispatch(.playlistDetailRequest(id: id))
                     }
                 }
             }){

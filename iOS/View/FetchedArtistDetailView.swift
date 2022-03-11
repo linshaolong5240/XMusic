@@ -30,13 +30,13 @@ struct FetchedArtistDetailView: View {
                             ArtistDetailView(artist: artist)
                                 .onAppear {
                                     if results.first?.introduction == nil {
-                                        Store.shared.dispatch(.artistDetailRequest(id: id))
+                                        XMStore.shared.dispatch(.artistDetailRequest(id: id))
                                     }
                                 }
                         }else {
                             Text("Loading...")
                                 .onAppear {
-                                    Store.shared.dispatch(.artistDetailRequest(id: id))
+                                    XMStore.shared.dispatch(.artistDetailRequest(id: id))
                                 }
                             Spacer()
                         }
@@ -62,7 +62,7 @@ struct ArtistView_Previews: PreviewProvider {
         ZStack {
             QinBackgroundView()
             ArtistDetailView(artist: Artist(context: DataManager.shared.context()))
-                .environmentObject(Store.shared)
+                .environmentObject(XMStore.shared)
         }
     }
 }
@@ -72,7 +72,7 @@ struct ArtistDetailView: View {
     enum Selection {
         case album, hotSong, mv
     }
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     @State private var selection: Selection = .hotSong
     @ObservedObject var artist: Artist
     
@@ -85,8 +85,8 @@ struct ArtistDetailView: View {
                 Spacer()
                 Button(action: {
                     let id = artist.id
-                    let sub = !Store.shared.appState.artist.subedIds.contains(Int(id))
-                    Store.shared.dispatch(.artistSubRequest(id: Int(id), sub: sub))
+                    let sub = !XMStore.shared.appState.artist.subedIds.contains(Int(id))
+                    XMStore.shared.dispatch(.artistSubRequest(id: Int(id), sub: sub))
                 }) {
                     QinSFView(systemName: store.appState.artist.subedIds.contains(Int(artist.id)) ? "heart.fill" : "heart",
                               size: .small)
@@ -133,7 +133,7 @@ struct ArtistDetailView: View {
                         return left.publishTime ?? "" > right.publishTime ?? "" ? true : false
                     }), gridColumns: 3) { item in
                         Button(action: {
-                            Store.shared.dispatch(.mvDetailRequest(id: Int(item.id)))
+                            XMStore.shared.dispatch(.mvDetailRequest(id: Int(item.id)))
                         }) {
                             NavigationLink(destination: FetchedMVDetailView(id: Int(item.id))) {
                                 CommonGridItemView(item)
@@ -150,11 +150,11 @@ struct ArtistDetailView: View {
             switch value {
             case .album:
                 if artist.albums?.count == 0 {
-                    Store.shared.dispatch(.artistAlbumsRequest(id: Int(artist.id)))
+                    XMStore.shared.dispatch(.artistAlbumsRequest(id: Int(artist.id)))
                 }
             case .mv:
                 if artist.mvs?.count == 0 {
-                    Store.shared.dispatch(.artistMVsRequest(id: Int(artist.id)))
+                    XMStore.shared.dispatch(.artistMVsRequest(id: Int(artist.id)))
                 }
             case .hotSong: break
             }

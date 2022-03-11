@@ -90,13 +90,13 @@ struct MVDetailView: View {
        NCM.requestPublisher(action: NCMMVURLAction(id: Int(mv.id)))
             .sink { completion in
                 if case .failure(let error) = completion {
-                    Store.shared.dispatch(.error(.error(error)))
+                    XMStore.shared.dispatch(.error(.error(error)))
                 }
             } receiveValue: { mvURLResponse in
 //                store.dispatch(.mvDetaillRequestDone(result: .success(id)))
                 mvURL = URL(string: mvURLResponse.data.url)
                 showPlayer = true
-            }.store(in: &Store.shared.cancells)
+            }.store(in: &XMStore.shared.cancells)
     }
 }
 
@@ -107,7 +107,7 @@ struct AVPlayerView: UIViewControllerRepresentable {
         if url != nil {
             uiViewController.player = AVPlayer(url: url!)
             uiViewController.player?.play()
-            Store.shared.dispatch(.playerPause)
+            XMStore.shared.dispatch(.playerPause)
         }
     }
     

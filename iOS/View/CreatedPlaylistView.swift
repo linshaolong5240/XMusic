@@ -73,17 +73,17 @@ struct CreatedPlaylistView: View {
 struct CreatedPlaylistView_Previews: PreviewProvider {
     static var previews: some View {
         CreatedPlaylistView(playlist: [])
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
             .preferredColorScheme(.light)
         CreatedPlaylistView(playlist: [])
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
             .preferredColorScheme(.dark)
     }
 }
 #endif
 
 struct PlaylistCreateView: View {
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     @Binding var showSheet: Bool
     @State private var name: String = ""
     
@@ -112,7 +112,7 @@ struct PlaylistCreateView: View {
                     .padding()
                 Button(action: {
                     showSheet.toggle()
-                    Store.shared.dispatch(.playlistCreateRequest(name: name))
+                    XMStore.shared.dispatch(.playlistCreateRequest(name: name))
                 }){
                     HStack(spacing: 0.0) {
                         QinSFView(systemName: "folder.badge.plus", size: .medium)

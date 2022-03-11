@@ -34,7 +34,7 @@ class DiscoverPlaylistViewModel: ObservableObject {
         cancell = NCM.requestPublisher(action: NCMPlaylistCategoryListAction(category: cat, order: .hot, limit: 30, offset: 0 * 30, total: true))
             .sink { completion in
                 if case .failure(let error) = completion {
-                    Store.shared.dispatch(.error(.error(error)))
+                    XMStore.shared.dispatch(.error(.error(error)))
                 }
             } receiveValue: {[weak self] playlistListResponse in
                 self?.playlists = playlistListResponse.playlists

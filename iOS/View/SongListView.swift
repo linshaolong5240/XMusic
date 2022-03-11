@@ -9,7 +9,7 @@ import SwiftUI
 import NeumorphismSwiftUI
 
 struct SongListView: View {
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     @State private var showPlayingNow: Bool = false
     @State private var showLike: Bool = false
     
@@ -22,13 +22,13 @@ struct SongListView: View {
             HStack {
                 Button(action: {
                     if showLike {
-                        let likeIds = Store.shared.appState.playlist.songlikedIds
-                        Store.shared.dispatch(.PlayerPlaySongs(songs: songs.map(QinSong.init)
+                        let likeIds = XMStore.shared.appState.playlist.songlikedIds
+                        XMStore.shared.dispatch(.PlayerPlaySongs(songs: songs.map(QinSong.init)
                                                                 .filter({ likeIds.contains($0.id) })))
                     }else {
-                        Store.shared.dispatch(.PlayerPlaySongs(songs: songs.map(QinSong.init)))
+                        XMStore.shared.dispatch(.PlayerPlaySongs(songs: songs.map(QinSong.init)))
                     }
-                    Store.shared.dispatch(.playerPlayBy(index: 0))
+                    XMStore.shared.dispatch(.playerPlayBy(index: 0))
                 }) {
                     Text(showLike ? "播放喜欢" : "播放全部")
                         .fontWeight(.bold)
@@ -50,7 +50,7 @@ struct SongListView: View {
                             QinSongRowView(viewModel: .init(item.asQinSong()))
                                 .padding(.horizontal)
                                 .onTapGesture {
-                                    if Int(item.id) == Store.shared.appState.playing.song?.id {
+                                    if Int(item.id) == XMStore.shared.appState.playing.song?.id {
                                         showPlayingNow.toggle()
                                     }
                                 }

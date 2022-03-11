@@ -56,7 +56,7 @@ struct LyricView_Previews: PreviewProvider {
         //            .environment(\.managedObjectContext, DataManager.shared.context())
         LyricView(lyric: data)
             .preferredColorScheme(.dark)
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
             .environmentObject(Player.shared)
             .environment(\.managedObjectContext, DataManager.shared.context())
         

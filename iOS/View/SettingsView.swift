@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: XMStore
     
     var body: some View {
         Form {
@@ -22,7 +22,7 @@ struct SettingsView: View {
     }
 }
 struct ThemeSelectView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: XMStore
     private var settings: AppState.Settings {store.appState.settings}
     
     var body: some View {
@@ -50,7 +50,7 @@ struct ThemeSelectView: View {
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            SettingsView().environmentObject(Store())
+            SettingsView().environmentObject(XMStore())
         }
     }
 }

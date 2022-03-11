@@ -32,13 +32,13 @@ struct CommentView: View {
 struct CommentView_Previews: PreviewProvider {
     static var previews: some View {
         CommentView(id: 0)
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
     }
 }
 #endif
 
 struct CommentListView: View {
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     private var comment: AppState.Comment { store.appState.comment }
     @State private var editComment: String = ""
     @State private var showCancel: Bool = false
@@ -64,7 +64,7 @@ struct CommentListView: View {
                 }
                 Button(action: {
                     hideKeyboard()
-                    Store.shared.dispatch(.commentRequest(id: id, content: editComment, type: .song, action: .add))
+                    XMStore.shared.dispatch(.commentRequest(id: id, content: editComment, type: .song, action: .add))
                     editComment = ""
                 }) {
                     QinSFView(systemName: "arrow.up.message.fill", size: .small)
@@ -73,8 +73,8 @@ struct CommentListView: View {
             }
             .padding()
             .onAppear {
-                if Store.shared.appState.comment.id != id {
-                    Store.shared.dispatch(.commentMusicRequest(rid: id))
+                if XMStore.shared.appState.comment.id != id {
+                    XMStore.shared.dispatch(.commentMusicRequest(rid: id))
                 }
             }
             if comment.commentMusicRequesting {
@@ -100,7 +100,7 @@ struct CommentListView: View {
                     .padding(.horizontal)
                     if comment.comments.count < comment.total {
                         Button(action: {
-                            Store.shared.dispatch(.commentMusicLoadMoreRequest)
+                            XMStore.shared.dispatch(.commentMusicLoadMoreRequest)
                         }, label: {
                             Text("Load more")
                         })
@@ -114,7 +114,7 @@ struct CommentListView: View {
 }
 
 struct CommentRowView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: XMStore
     private var user: User? { store.appState.settings.loginUser }
 
     @StateObject var viewModel: CommentViewModel
@@ -132,7 +132,7 @@ struct CommentRowView: View {
                     Spacer()
                     Text(String(viewModel.likedCount))
                     Button(action: {
-                        Store.shared.dispatch(.commentLikeRequest(id: id, cid: viewModel.commentId, like: viewModel.liked ? false : true, type: type))
+                        XMStore.shared.dispatch(.commentLikeRequest(id: id, cid: viewModel.commentId, like: viewModel.liked ? false : true, type: type))
                         viewModel.liked.toggle()
                     }, label: {
                         Image(systemName: viewModel.liked ? "hand.thumbsup.fill" : "hand.thumbsup")
@@ -155,7 +155,7 @@ struct CommentRowView: View {
                     Spacer()
                     if viewModel.userId == user?.userId ?? 0 {
                         Button(action: {
-                            Store.shared.dispatch(.commentRequest(id: id, commentId: viewModel.commentId, type: type, action: .delete))
+                            XMStore.shared.dispatch(.commentRequest(id: id, commentId: viewModel.commentId, type: type, action: .delete))
                         }, label: {
                             Text("删除")
                         })

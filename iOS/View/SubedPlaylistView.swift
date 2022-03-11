@@ -26,7 +26,7 @@ struct SubedPlaylistView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(Color.mainText)
-                Text("(\(Store.shared.appState.playlist.subedPlaylistIds.count))")
+                Text("(\(XMStore.shared.appState.playlist.subedPlaylistIds.count))")
                     .foregroundColor(Color.mainText)
                 Spacer()
                 Button(action: {

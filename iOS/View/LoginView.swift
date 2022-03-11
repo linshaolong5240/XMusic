@@ -9,7 +9,7 @@ import SwiftUI
 import NeumorphismSwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: XMStore
     private var settings: AppState.Settings { store.appState.settings }
 
     @State  private var email: String = ""
@@ -56,10 +56,10 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
             .preferredColorScheme(.light)
         LoginView()
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
             .preferredColorScheme(.dark)
 
     }

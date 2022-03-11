@@ -14,7 +14,7 @@ struct XMusicApp: App {
     #if canImport(UIKit)
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate: AppDelegate
     #endif
-    @StateObject var store = Store.shared
+    @StateObject var store = XMStore.shared
     @StateObject var player = Player.shared
     let context = DataManager.shared.context()
 //    let persistenceController = PersistenceController.shared

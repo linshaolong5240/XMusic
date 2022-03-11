@@ -9,8 +9,8 @@
 import Foundation
 import Combine
 
-class Store: ObservableObject {
-    public static let shared = Store()
+class XMStore: ObservableObject {
+    public static let shared = XMStore()
     
     var cancells = Set<AnyCancellable>()
 

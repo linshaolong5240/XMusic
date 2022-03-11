@@ -11,7 +11,7 @@ import Kingfisher
 import struct Kingfisher.DownsamplingImageProcessor
 
 struct PlayingNowButtonView: View {
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     @EnvironmentObject private var player: Player
     @State private var showPlayingNow: Bool = false
     
@@ -54,7 +54,7 @@ struct PlayingNowButtonView: View {
 struct PlayingNowButtonView_Previews: PreviewProvider {
     static var previews: some View {
         PlayingNowButtonView()
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
             .environmentObject(Player.shared)
     }
 }

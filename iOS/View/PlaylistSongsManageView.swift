@@ -29,10 +29,10 @@ struct PlaylistSongsManageView: View {
                     Button(action: {
                         showSheet.toggle()
                         if deletedIds.count > 0 {
-                            Store.shared.dispatch(.playlistTracksRequest(pid: Int(playlist.id), ids: deletedIds.map(Int.init), op: false))
+                            XMStore.shared.dispatch(.playlistTracksRequest(pid: Int(playlist.id), ids: deletedIds.map(Int.init), op: false))
                         }
                         if isMoved {
-                            Store.shared.dispatch(.songsOrderUpdateRequesting(pid: Int(playlist.id), ids: songs.map{ Int($0.id) }))
+                            XMStore.shared.dispatch(.songsOrderUpdateRequesting(pid: Int(playlist.id), ids: songs.map{ Int($0.id) }))
                         }
                     }, label: {
                         QinSFView(systemName: "checkmark", size: .medium)

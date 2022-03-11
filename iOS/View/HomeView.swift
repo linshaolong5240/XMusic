@@ -10,7 +10,7 @@ import SwiftUI
 import NeumorphismSwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     @EnvironmentObject private var player: Player
     private var album: AppState.Album { store.appState.album }
     private var artist: AppState.Artist { store.appState.artist }
@@ -77,7 +77,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
             .environmentObject(Player.shared)
             .environment(\.colorScheme, .light)
     }

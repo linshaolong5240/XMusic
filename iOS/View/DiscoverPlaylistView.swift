@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DiscoverPlaylistView: View {
-    @EnvironmentObject private var store: Store
+    @EnvironmentObject private var store: XMStore
     @ObservedObject var viewModel: DiscoverPlaylistViewModel
 
     @State private var selection: Int = 0

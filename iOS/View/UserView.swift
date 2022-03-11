@@ -10,7 +10,7 @@ import SwiftUI
 import NeumorphismSwiftUI
 
 struct UserView: View {
-    @EnvironmentObject var store: Store
+    @EnvironmentObject var store: XMStore
     private var user: User? { store.appState.settings.loginUser }
     
     var body: some View {
@@ -35,7 +35,7 @@ struct UserView: View {
                     Text("uid: \(uid)")
                 }
                 Button(action: {
-                    Store.shared.dispatch(.logoutRequest)
+                    XMStore.shared.dispatch(.logoutRequest)
                 }) {
                     Text("退出登录")
                         .padding()
@@ -53,7 +53,7 @@ struct UserView: View {
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         UserView()
-            .environmentObject(Store.shared)
+            .environmentObject(XMStore.shared)
             .environment(\.colorScheme, .light)
     }
 }

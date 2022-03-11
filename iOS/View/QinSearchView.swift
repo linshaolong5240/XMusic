@@ -160,7 +160,7 @@ struct SearchView_Previews: PreviewProvider {
         ZStack {
             QinBackgroundView()
             QinSearchView(viewModel: SearchViewModel())
-                .environmentObject(Store.shared)
+                .environmentObject(XMStore.shared)
         }
         
         //        SearchPlaylistResultRowView(viewModel: PlaylistViewModel())
