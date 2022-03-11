@@ -30,8 +30,8 @@
 		44E4EE7827DBDCCE00C2803E /* NeteaseCloudMusicAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EE7727DBDCCE00C2803E /* NeteaseCloudMusicAPI */; };
 		44E4EE7F27DBDD3C00C2803E /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7A27DBDD3C00C2803E /* AppAction.swift */; };
 		44E4EE8027DBDD3C00C2803E /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7A27DBDD3C00C2803E /* AppAction.swift */; };
-		44E4EE8127DBDD3C00C2803E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7B27DBDD3C00C2803E /* AppError.swift */; };
-		44E4EE8227DBDD3C00C2803E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7B27DBDD3C00C2803E /* AppError.swift */; };
+		44E4EE8127DBDD3C00C2803E /* XMAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7B27DBDD3C00C2803E /* XMAppError.swift */; };
+		44E4EE8227DBDD3C00C2803E /* XMAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7B27DBDD3C00C2803E /* XMAppError.swift */; };
 		44E4EE8327DBDD3C00C2803E /* XMAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */; };
 		44E4EE8427DBDD3C00C2803E /* XMAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */; };
 		44E4EE8527DBDD3C00C2803E /* AppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */; };
@@ -175,7 +175,7 @@
 		44E4EE6927DBDB4C00C2803E /* QinSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QinSong.swift; sourceTree = "<group>"; };
 		44E4EE6A27DBDB4C00C2803E /* AudioSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSessionManager.swift; sourceTree = "<group>"; };
 		44E4EE7A27DBDD3C00C2803E /* AppAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
-		44E4EE7B27DBDD3C00C2803E /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		44E4EE7B27DBDD3C00C2803E /* XMAppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMAppError.swift; sourceTree = "<group>"; };
 		44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMAppState.swift; sourceTree = "<group>"; };
 		44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCommand.swift; sourceTree = "<group>"; };
 		44E4EE7E27DBDD3C00C2803E /* XMStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMStore.swift; sourceTree = "<group>"; };
@@ -331,7 +331,7 @@
 			children = (
 				44E4EE7A27DBDD3C00C2803E /* AppAction.swift */,
 				44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */,
-				44E4EE7B27DBDD3C00C2803E /* AppError.swift */,
+				44E4EE7B27DBDD3C00C2803E /* XMAppError.swift */,
 				44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */,
 				44E4EE7E27DBDD3C00C2803E /* XMStore.swift */,
 			);
@@ -640,7 +640,7 @@
 				44E4EEDE27DBDE7D00C2803E /* UIDevice+Extension.swift in Sources */,
 				44E4EEA827DBDD7D00C2803E /* SwiftUIHelper.swift in Sources */,
 				44E4EF1927DBDE9700C2803E /* CreatedPlaylistView.swift in Sources */,
-				44E4EE8127DBDD3C00C2803E /* AppError.swift in Sources */,
+				44E4EE8127DBDD3C00C2803E /* XMAppError.swift in Sources */,
 				44E4EF0127DBDE9700C2803E /* SubedPlaylistView.swift in Sources */,
 				44E4EF2F27DBDE9700C2803E /* PlaylistSongsManageView.swift in Sources */,
 				44E4EED927DBDE3B00C2803E /* PlaylistViewModel.swift in Sources */,
@@ -717,7 +717,7 @@
 				44E4EEBF27DBDD9100C2803E /* QinNavigationBarTitleView.swift in Sources */,
 				44E4EEA927DBDD7D00C2803E /* SwiftUIHelper.swift in Sources */,
 				44E4EF1A27DBDE9700C2803E /* CreatedPlaylistView.swift in Sources */,
-				44E4EE8227DBDD3C00C2803E /* AppError.swift in Sources */,
+				44E4EE8227DBDD3C00C2803E /* XMAppError.swift in Sources */,
 				44E4EF0227DBDE9700C2803E /* SubedPlaylistView.swift in Sources */,
 				44E4EF3027DBDE9700C2803E /* PlaylistSongsManageView.swift in Sources */,
 				44E4EEDA27DBDE3B00C2803E /* PlaylistViewModel.swift in Sources */,

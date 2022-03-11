@@ -1,5 +1,5 @@
 //
-//  AppError.swift
+//  XMAppError.swift
 //  XMusic
 //
 //  Created by teenloong on 2022/3/12.
@@ -9,12 +9,12 @@
 import Foundation
 
 extension Error {
-    func asAppError() -> AppError {
+    func asAppError() -> XMAppError {
         .error(self)
     }
 }
 
-enum AppError: Error, Identifiable {
+enum XMAppError: Error, Identifiable {
     var id: String { localizedDescription }
     case error(Error)
     case albumDetailRequest
@@ -61,7 +61,7 @@ enum AppError: Error, Identifiable {
     case playingError(message: String)
 }
 
-extension AppError {
+extension XMAppError {
     var localizedDescription: String {
         switch self {
         case .error(let error):  return error.localizedDescription

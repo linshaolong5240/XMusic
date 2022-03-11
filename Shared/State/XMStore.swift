@@ -300,7 +300,7 @@ class XMStore: ObservableObject {
                     appCommand = PlayerPlayWithUrlCommand(url: url)
                 }else {
                     appCommand = PlayerPlayForwardCommand()
-                    appState.error = AppError.songsURLError
+                    appState.error = XMAppError.songsURLError
                 }
             case .failure(let error):
                 appState.error = error

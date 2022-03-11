@@ -23,7 +23,7 @@ struct XMAppState {
     var playing = Playing()
     var playlist = Playlist()
     var settings = Settings()
-    var error: AppError?
+    var error: XMAppError?
 }
 
 extension XMAppState {
@@ -70,7 +70,7 @@ extension XMAppState {
         var artistSublist = [NCMArtistSublistResponse.Artist]()
         var subedIds: [Int] { artistSublist.map(\.id) }
 
-        var error: AppError?
+        var error: XMAppError?
     }
     
     struct Cloud {
@@ -131,7 +131,7 @@ extension XMAppState {
         var isSeeking: Bool = false
         @CombineUserStorge(key: .playerPlaylist, container: .standard)
         var playinglist:[QinSong] = []
-        var playingError: AppError?
+        var playingError: XMAppError?
         @CombineUserStorge(key: .playerSong, container: .standard)
         var song: QinSong? = nil
         var songUrl: String?

@@ -92,7 +92,7 @@ struct AlbumDetailRequestCommand: AppCommand {
                 }
             } receiveValue: { albumDetailResponse in
                 guard albumDetailResponse.isSuccess else {
-                    store.dispatch(.albumDetailRequestDone(result: .failure(AppError.albumDetailRequest)))
+                    store.dispatch(.albumDetailRequestDone(result: .failure(XMAppError.albumDetailRequest)))
                     return
                 }
                 DataManager.shared.updateAlbum(model: albumDetailResponse)
@@ -113,7 +113,7 @@ struct AlbumSubRequestCommand: AppCommand {
                 }
             } receiveValue: { albumSubResponse in
                 guard albumSubResponse.isSuccess else {
-                    store.dispatch(.albumSubRequestDone(result: .failure(AppError.albumSubRequest)))
+                    store.dispatch(.albumSubRequestDone(result: .failure(XMAppError.albumSubRequest)))
                     return
                 }
                 store.dispatch(.albumSubRequestDone(result: .success(sub)))
@@ -139,7 +139,7 @@ struct AlbumSublistRequestCommand: AppCommand {
                 }
             } receiveValue: { albumSublistResponse in
                 guard albumSublistResponse.isSuccess else {
-                    store.dispatch(.albumSublistRequestDone(result: .failure(AppError.albumSublistRequest)))
+                    store.dispatch(.albumSublistRequestDone(result: .failure(XMAppError.albumSublistRequest)))
                     return
                 }
                 store.dispatch(.albumSublistRequestDone(result: .success(albumSublistResponse)))
@@ -183,7 +183,7 @@ struct ArtistDetailRequestCommand: AppCommand {
                 }
             } receiveValue: { artistHotSongsResponse, artistIntroductionResponse in
                 guard artistHotSongsResponse.isSuccess else {
-                    store.dispatch(.artistDetailRequestDone(result: .failure(AppError.artistDetailRequest)))
+                    store.dispatch(.artistDetailRequestDone(result: .failure(XMAppError.artistDetailRequest)))
                     return
                 }
                 let introduction = artistIntroductionResponse.desc
@@ -209,7 +209,7 @@ struct ArtistMVsRequestCommand: AppCommand {
                 }
             } receiveValue: { artistMVResponse in
                 guard artistMVResponse.isSuccess else {
-                    store.dispatch(.artistMVsRequestDone(result: .failure(AppError.artistMVsRequest)))
+                    store.dispatch(.artistMVsRequestDone(result: .failure(XMAppError.artistMVsRequest)))
                     return
                 }
                 DataManager.shared.updateMV(model: artistMVResponse)
@@ -230,7 +230,7 @@ struct ArtistSubRequestCommand: AppCommand {
                 }
             } receiveValue: { artistSubResponse in
                 guard artistSubResponse.isSuccess else {
-                    store.dispatch(.artistSubRequestDone(result: .failure(AppError.artistSubRequest)))
+                    store.dispatch(.artistSubRequestDone(result: .failure(XMAppError.artistSubRequest)))
                     return
                 }
                 store.dispatch(.artistSubRequestDone(result: .success(sub)))
@@ -262,7 +262,7 @@ struct ArtistSublistRequestCommand: AppCommand {
                 }
             } receiveValue: { artistSublistResponse in
                 guard artistSublistResponse.isSuccess else {
-                    store.dispatch(.artistSublistRequestDone(result: .failure(AppError.artistSublistRequest)))
+                    store.dispatch(.artistSublistRequestDone(result: .failure(XMAppError.artistSublistRequest)))
                     return
                 }
                 store.dispatch(.artistSublistRequestDone(result: .success(artistSublistResponse)))
@@ -303,7 +303,7 @@ struct CloudSongAddRequstCommand: AppCommand {
                 }
             } receiveValue: { response in
                 guard response.isSuccess else {
-                    store.dispatch(.cloudSongAddRequstDone(result: .failure(AppError.cloudSongAddRequest)))
+                    store.dispatch(.cloudSongAddRequstDone(result: .failure(XMAppError.cloudSongAddRequest)))
                     return
                 }
                 store.dispatch(.cloudSongAddRequstDone(result: .success(response)))
@@ -325,7 +325,7 @@ struct CloudUploadCheckRequestCommand: AppCommand {
                 }
             } receiveValue: { response in
                 guard response.isSuccess else {
-                    store.dispatch(.cloudUploadCheckRequestDone(result: .failure(AppError.cloudUploadCheckRequest)))
+                    store.dispatch(.cloudUploadCheckRequestDone(result: .failure(XMAppError.cloudUploadCheckRequest)))
                     return
                 }
                 store.dispatch(.cloudUploadCheckRequestDone(result: .success((response: response, md5: md5))))
@@ -354,7 +354,7 @@ struct CloudUploadInfoRequestCommand: AppCommand {
             } receiveValue: { response in
                 print(response)
                 guard response.isSuccess else {
-                    store.dispatch(.cloudUploadInfoRequestDone(result: .failure(AppError.cloudUploadInfoRequest)))
+                    store.dispatch(.cloudUploadInfoRequestDone(result: .failure(XMAppError.cloudUploadInfoRequest)))
                     return
                 }
                 store.dispatch(.cloudUploadInfoRequestDone(result: .success(response)))
@@ -382,7 +382,7 @@ struct CloudUploadTokenRequestCommand: AppCommand {
                 }
             } receiveValue: { response in
                 guard response.isSuccess else {
-                    store.dispatch(.cloudUploadTokenRequestDone(result: .failure(AppError.cloudUploadTokenRequest)))
+                    store.dispatch(.cloudUploadTokenRequestDone(result: .failure(XMAppError.cloudUploadTokenRequest)))
                     return
                 }
                 store.dispatch(.cloudUploadTokenRequestDone(result: .success(response.result)))
@@ -421,7 +421,7 @@ struct CommentRequestCommand: AppCommand {
                     }
                 } receiveValue: { commentAddResponse in
                     guard commentAddResponse.isSuccess else {
-                        store.dispatch(.commentDoneRequest(result: .failure(AppError.comment)))
+                        store.dispatch(.commentDoneRequest(result: .failure(XMAppError.comment)))
                         return
                     }
                     let result = (id: id, type: type, action: action)
@@ -436,7 +436,7 @@ struct CommentRequestCommand: AppCommand {
                     }
                 } receiveValue: { commentDeleteResponse in
                     guard commentDeleteResponse.isSuccess else {
-                        store.dispatch(.commentDoneRequest(result: .failure(AppError.comment)))
+                        store.dispatch(.commentDoneRequest(result: .failure(XMAppError.comment)))
                         return
                     }
                     let result = (id: id, type: type, action: action)
@@ -474,7 +474,7 @@ struct CommentLikeRequestCommand: AppCommand {
                 }
             } receiveValue: { commentlikeResponse in
                 guard commentlikeResponse.isSuccess else {
-                    store.dispatch(.commentLikeDone(result: .failure(AppError.commentLikeRequest)))
+                    store.dispatch(.commentLikeDone(result: .failure(XMAppError.commentLikeRequest)))
                     return
                 }
                 store.dispatch(.commentLikeDone(result: .success(id)))
@@ -496,7 +496,7 @@ struct CommentMusicRequestCommand: AppCommand {
                 }
             } receiveValue: { commentSongResponse in
                 guard commentSongResponse.isSuccess else {
-                    store.dispatch(.commentMusicRequestDone(result: .failure(AppError.commentMusic)))
+                    store.dispatch(.commentMusicRequestDone(result: .failure(XMAppError.commentMusic)))
                     return
                 }
                 store.dispatch(.commentMusicRequestDone(result: .success(commentSongResponse)))
@@ -516,7 +516,7 @@ struct LoginRequestCommand: AppCommand {
                 }
             } receiveValue: { loginResponse in
                 guard loginResponse.isSuccess else {
-                    store.dispatch(.loginRequestDone(result: .failure(AppError.loginRequest)))
+                    store.dispatch(.loginRequestDone(result: .failure(XMAppError.loginRequest)))
                     return
                 }
                 store.dispatch(.loginRequestDone(result: .success(loginResponse)))
@@ -573,7 +573,7 @@ struct LogoutRequestCommand: AppCommand {
                 }
             } receiveValue: { logoutResponse in
                 guard logoutResponse.isSuccess else {
-                    store.dispatch(.logoutRequestDone(result: .failure(AppError.logoutRequest)))
+                    store.dispatch(.logoutRequestDone(result: .failure(XMAppError.logoutRequest)))
                     return
                 }
                 store.dispatch(.logoutRequestDone(result: .success(logoutResponse.code)))
@@ -592,7 +592,7 @@ struct MVDetailRequestCommand: AppCommand {
                 }
             } receiveValue: { response in
                 guard response.isSuccess else {
-                    store.dispatch(.mvDetaillRequestDone(result: .failure(AppError.mvDetailRequest)))
+                    store.dispatch(.mvDetaillRequestDone(result: .failure(XMAppError.mvDetailRequest)))
                     return
                 }
                 store.dispatch(.mvDetaillRequestDone(result: .success(id)))
@@ -770,7 +770,7 @@ struct PlaylistCategoriesRequestCommand: AppCommand {
                 }
             } receiveValue: { playlistCatalogueResponse in
                 guard playlistCatalogueResponse.isSuccess else {
-                    store.dispatch(.playlistCatalogueRequestsDone(result: .failure(AppError.playlistCategoriesRequest)))
+                    store.dispatch(.playlistCatalogueRequestsDone(result: .failure(XMAppError.playlistCategoriesRequest)))
                     return
                 }
                 var playlistCatalogue = [PlaylistCatalogue]()
@@ -802,7 +802,7 @@ struct PlaylistCreateRequestCommand: AppCommand {
                 }
             } receiveValue: { playlistCreateResponse in
                 guard playlistCreateResponse.isSuccess else {
-                    store.dispatch(.playlistCreateRequestDone(result: .failure(AppError.playlistCreateRequest)))
+                    store.dispatch(.playlistCreateRequestDone(result: .failure(XMAppError.playlistCreateRequest)))
                     return
                 }
                 store.dispatch(.playlistCreateRequestDone(result: .success(playlistCreateResponse.playlist.id)))
@@ -875,7 +875,7 @@ struct PlaylistDetailSongsRequestCommand: AppCommand {
                     }
                 } receiveValue: { songDetailResponse in
                     guard songDetailResponse.isSuccess else {
-                        store.dispatch(.playlistDetailSongsRequestDone(result: .failure(AppError.songsDetailError)))
+                        store.dispatch(.playlistDetailSongsRequestDone(result: .failure(XMAppError.songsDetailError)))
                         return
                     }
                     DataManager.shared.updateSongs(model: songDetailResponse.songs)
@@ -922,7 +922,7 @@ struct PlaylisSubscribeRequestCommand: AppCommand {
                 if playlistSubscribeResponse.isSuccess {
                     store.dispatch(.playlistSubscibeRequestDone(result: .success(id)))
                 }else {
-                    store.dispatch(.playlistSubscibeRequestDone(result: .failure(AppError.playlistSubscribeError)))
+                    store.dispatch(.playlistSubscibeRequestDone(result: .failure(XMAppError.playlistSubscribeError)))
                 }
             }.store(in: &store.cancells)
     }
@@ -949,7 +949,7 @@ struct PlaylistTracksRequestCommand: AppCommand {
                 if playlistSubscribeResponse.isSuccess {
                     store.dispatch(.playlistTracksRequestDone(result: .success(pid)))
                 }else {
-                    store.dispatch(.playlistTracksRequestDone(result: .failure(AppError.playlistSubscribeError)))
+                    store.dispatch(.playlistTracksRequestDone(result: .failure(XMAppError.playlistSubscribeError)))
                 }
             }.store(in: &store.cancells)
     }
@@ -972,7 +972,7 @@ struct RecommendPlaylistRequestCommand: AppCommand {
                 }
             } receiveValue: { recommendPlaylistResponse in
                 guard recommendPlaylistResponse.isSuccess else {
-                    store.dispatch(.recommendPlaylistRequestDone(result: .failure(AppError.recommendPlaylistRequest)))
+                    store.dispatch(.recommendPlaylistRequestDone(result: .failure(XMAppError.recommendPlaylistRequest)))
                     return
                 }
                 store.dispatch(.recommendPlaylistRequestDone(result: .success(recommendPlaylistResponse)))
@@ -989,7 +989,7 @@ struct RecommendSongsRequestCommand: AppCommand {
                 }
             } receiveValue: { recommendSongsResponse in
                 guard recommendSongsResponse.isSuccess else {
-                    store.dispatch(.recommendSongsRequestDone(result: .failure(AppError.recommendSongsError)))
+                    store.dispatch(.recommendSongsRequestDone(result: .failure(XMAppError.recommendSongsError)))
                     return
                 }
                 let ids = recommendSongsResponse.data.dailySongs.map(\.id)
@@ -1001,7 +1001,7 @@ struct RecommendSongsRequestCommand: AppCommand {
                         }
                     } receiveValue: { songDetailResponse in
                         guard songDetailResponse.isSuccess else {
-                            store.dispatch(.recommendSongsRequestDone(result: .failure(AppError.songsDetailError)))
+                            store.dispatch(.recommendSongsRequestDone(result: .failure(XMAppError.songsDetailError)))
                             return
                         }
                         DataManager.shared.updateSongs(model: songDetailResponse.songs)
@@ -1110,7 +1110,7 @@ struct SongsOrderUpdateRequestCommand: AppCommand {
                 }
             } receiveValue: { songOrderUpdateResponse in
                 guard songOrderUpdateResponse.isSuccess else {
-                    store.dispatch(.songsOrderUpdateRequestDone(result: .failure(AppError.songsOrderUpdate)))
+                    store.dispatch(.songsOrderUpdateRequestDone(result: .failure(XMAppError.songsOrderUpdate)))
                     return
                 }
                 store.dispatch(.songsOrderUpdateRequestDone(result: .success(pid)))
