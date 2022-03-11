@@ -15,7 +15,7 @@ struct PlayerControlBarView: View, NEUStyle {
     @EnvironmentObject private var store: XMStore
     @EnvironmentObject private var player: Player
     
-    private var playing: AppState.Playing { store.appState.playing }
+    private var playing: XMAppState.Playing { store.appState.playing }
 
     var body: some View {
         let backgroundColors: [Color] = neuBacgroundColors(colorScheme)

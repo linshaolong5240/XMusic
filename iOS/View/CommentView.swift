@@ -39,7 +39,7 @@ struct CommentView_Previews: PreviewProvider {
 
 struct CommentListView: View {
     @EnvironmentObject private var store: XMStore
-    private var comment: AppState.Comment { store.appState.comment }
+    private var comment: XMAppState.Comment { store.appState.comment }
     @State private var editComment: String = ""
     @State private var showCancel: Bool = false
     let id: Int

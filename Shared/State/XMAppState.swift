@@ -1,5 +1,5 @@
 //
-//  AppState.swift
+//  XMAppState.swift
 //  XMusic
 //
 //  Created by teenloong on 2022/3/12.
@@ -12,7 +12,7 @@ import NeteaseCloudMusicAPI
 
 typealias User = NCMLoginResponse
 
-struct AppState {
+struct XMAppState {
     var initRequestingCount: Int = 0
     var album = Album()
     var artist = Artist()
@@ -26,7 +26,7 @@ struct AppState {
     var error: AppError?
 }
 
-extension AppState {
+extension XMAppState {
     struct Settings {
         enum AccountBehavior: CaseIterable {
             case login, logout

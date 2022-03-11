@@ -12,9 +12,9 @@ import NeumorphismSwiftUI
 struct HomeView: View {
     @EnvironmentObject private var store: XMStore
     @EnvironmentObject private var player: Player
-    private var album: AppState.Album { store.appState.album }
-    private var artist: AppState.Artist { store.appState.artist }
-    private var playlist: AppState.Playlist { store.appState.playlist }
+    private var album: XMAppState.Album { store.appState.album }
+    private var artist: XMAppState.Artist { store.appState.artist }
+    private var playlist: XMAppState.Playlist { store.appState.playlist }
     private var user: User? { store.appState.settings.loginUser }
         
     var body: some View {

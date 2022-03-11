@@ -23,13 +23,13 @@ struct SettingsView: View {
 }
 struct ThemeSelectView: View {
     @EnvironmentObject var store: XMStore
-    private var settings: AppState.Settings {store.appState.settings}
+    private var settings: XMAppState.Settings {store.appState.settings}
     
     var body: some View {
         VStack {
             Form {
                 Section {
-                    ForEach(AppState.Settings.Theme.allCases, id: \.self) { item in
+                    ForEach(XMAppState.Settings.Theme.allCases, id: \.self) { item in
                         Button(action: {
                         }) {
                             HStack {

@@ -14,7 +14,7 @@ class XMStore: ObservableObject {
     
     var cancells = Set<AnyCancellable>()
 
-    @Published var appState = AppState()
+    @Published var appState = XMAppState()
     func dispatch(_ action: AppAction) {
         #if DEBUG
         print("[ACTION]: \(action)")
@@ -29,7 +29,7 @@ class XMStore: ObservableObject {
         }
     }
     
-    func reduce(state: AppState, action: AppAction) -> (AppState, AppCommand?) {
+    func reduce(state: XMAppState, action: AppAction) -> (XMAppState, AppCommand?) {
         var appState = state
         var appCommand: AppCommand? = nil
         

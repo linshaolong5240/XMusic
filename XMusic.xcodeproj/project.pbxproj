@@ -32,8 +32,8 @@
 		44E4EE8027DBDD3C00C2803E /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7A27DBDD3C00C2803E /* AppAction.swift */; };
 		44E4EE8127DBDD3C00C2803E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7B27DBDD3C00C2803E /* AppError.swift */; };
 		44E4EE8227DBDD3C00C2803E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7B27DBDD3C00C2803E /* AppError.swift */; };
-		44E4EE8327DBDD3C00C2803E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7C27DBDD3C00C2803E /* AppState.swift */; };
-		44E4EE8427DBDD3C00C2803E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7C27DBDD3C00C2803E /* AppState.swift */; };
+		44E4EE8327DBDD3C00C2803E /* XMAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */; };
+		44E4EE8427DBDD3C00C2803E /* XMAppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */; };
 		44E4EE8527DBDD3C00C2803E /* AppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */; };
 		44E4EE8627DBDD3C00C2803E /* AppCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */; };
 		44E4EE8727DBDD3C00C2803E /* XMStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE7E27DBDD3C00C2803E /* XMStore.swift */; };
@@ -176,7 +176,7 @@
 		44E4EE6A27DBDB4C00C2803E /* AudioSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSessionManager.swift; sourceTree = "<group>"; };
 		44E4EE7A27DBDD3C00C2803E /* AppAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
 		44E4EE7B27DBDD3C00C2803E /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		44E4EE7C27DBDD3C00C2803E /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMAppState.swift; sourceTree = "<group>"; };
 		44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCommand.swift; sourceTree = "<group>"; };
 		44E4EE7E27DBDD3C00C2803E /* XMStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMStore.swift; sourceTree = "<group>"; };
 		44E4EE8A27DBDD6C00C2803E /* Published+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Published+Extension.swift"; sourceTree = "<group>"; };
@@ -332,7 +332,7 @@
 				44E4EE7A27DBDD3C00C2803E /* AppAction.swift */,
 				44E4EE7D27DBDD3C00C2803E /* AppCommand.swift */,
 				44E4EE7B27DBDD3C00C2803E /* AppError.swift */,
-				44E4EE7C27DBDD3C00C2803E /* AppState.swift */,
+				44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */,
 				44E4EE7E27DBDD3C00C2803E /* XMStore.swift */,
 			);
 			path = State;
@@ -611,7 +611,7 @@
 				44E4EE9827DBDD6C00C2803E /* JSONHelper.swift in Sources */,
 				44E4EF0B27DBDE9700C2803E /* LoginView.swift in Sources */,
 				44E4EE9427DBDD6C00C2803E /* CaseIterable+Extension.swift in Sources */,
-				44E4EE8327DBDD3C00C2803E /* AppState.swift in Sources */,
+				44E4EE8327DBDD3C00C2803E /* XMAppState.swift in Sources */,
 				44E4EEA627DBDD7D00C2803E /* UserStorgeHelper.swift in Sources */,
 				44E4EF2B27DBDE9700C2803E /* SettingsView.swift in Sources */,
 				44E4EE5327DBD3BC00C2803E /* Persistence.swift in Sources */,
@@ -689,7 +689,7 @@
 				44E4EE9927DBDD6C00C2803E /* JSONHelper.swift in Sources */,
 				44E4EF0C27DBDE9700C2803E /* LoginView.swift in Sources */,
 				44E4EE9527DBDD6C00C2803E /* CaseIterable+Extension.swift in Sources */,
-				44E4EE8427DBDD3C00C2803E /* AppState.swift in Sources */,
+				44E4EE8427DBDD3C00C2803E /* XMAppState.swift in Sources */,
 				44E4EEA727DBDD7D00C2803E /* UserStorgeHelper.swift in Sources */,
 				44E4EF2C27DBDE9700C2803E /* SettingsView.swift in Sources */,
 				44E4EE5427DBD3BC00C2803E /* Persistence.swift in Sources */,

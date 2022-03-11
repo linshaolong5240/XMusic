@@ -46,8 +46,8 @@ struct PlayerView: View {
     @EnvironmentObject var store: XMStore
     @StateObject var viewModel: PlayerViewModel = .init()
     
-    private var playing: AppState.Playing { store.appState.playing }
-    private var playlist: AppState.Playlist { store.appState.playlist }
+    private var playing: XMAppState.Playing { store.appState.playing }
+    private var playlist: XMAppState.Playlist { store.appState.playlist }
     
     @State private var showComment: Bool = false
     @State private var showArtist: Bool = false
@@ -186,7 +186,7 @@ struct PlayerControllView: View {
     @EnvironmentObject private var store: XMStore
     @EnvironmentObject private var player: Player
     @ObservedObject var viewModel: PlayerViewModel
-    private var playing: AppState.Playing { store.appState.playing }
+    private var playing: XMAppState.Playing { store.appState.playing }
     
     @State private var showLyric: Bool = false
     @Binding var showArtist: Bool
@@ -344,7 +344,7 @@ struct PlaylistTracksView: View {
 struct PlayingExtensionControllView: View {
     @EnvironmentObject var store: XMStore
     
-    private var settings: AppState.Settings { store.appState.settings }
+    private var settings: XMAppState.Settings { store.appState.settings }
     
     var body: some View {
         VStack {
@@ -367,8 +367,8 @@ struct PlayingExtensionControllView: View {
 
 struct PlayerCoverView: View {
     @EnvironmentObject var store: XMStore
-    private var playing: AppState.Playing { store.appState.playing }
-    private var settings: AppState.Settings { store.appState.settings }
+    private var playing: XMAppState.Playing { store.appState.playing }
+    private var settings: XMAppState.Settings { store.appState.settings }
     
     @ObservedObject var viewModel: PlayerViewModel
     

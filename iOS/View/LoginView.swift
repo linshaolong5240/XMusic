@@ -10,7 +10,7 @@ import NeumorphismSwiftUI
 
 struct LoginView: View {
     @EnvironmentObject var store: XMStore
-    private var settings: AppState.Settings { store.appState.settings }
+    private var settings: XMAppState.Settings { store.appState.settings }
 
     @State  private var email: String = ""
     @State  private var password: String = ""
