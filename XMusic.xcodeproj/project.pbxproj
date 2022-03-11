@@ -157,6 +157,7 @@
 		44E4EF4727DBEBD600C2803E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4627DBEBD600C2803E /* Kingfisher */; };
 		44E4EF4927DBEBD900C2803E /* NeteaseCloudMusicAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4827DBEBD900C2803E /* NeteaseCloudMusicAPI */; };
 		44E4EF4B27DBEBDC00C2803E /* NeumorphismSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4A27DBEBDC00C2803E /* NeumorphismSwiftUI */; };
+		44E4EF4E27DBECF300C2803E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4D27DBECF300C2803E /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -247,6 +248,7 @@
 			files = (
 				44E4EE7527DBDB7300C2803E /* Kingfisher in Frameworks */,
 				44E4EE7827DBDCCE00C2803E /* NeteaseCloudMusicAPI in Frameworks */,
+				44E4EF4E27DBECF300C2803E /* ComposableArchitecture in Frameworks */,
 				44E4EF3B27DBDF2D00C2803E /* NeumorphismSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +490,7 @@
 				44E4EE7427DBDB7300C2803E /* Kingfisher */,
 				44E4EE7727DBDCCE00C2803E /* NeteaseCloudMusicAPI */,
 				44E4EF3A27DBDF2D00C2803E /* NeumorphismSwiftUI */,
+				44E4EF4D27DBECF300C2803E /* ComposableArchitecture */,
 			);
 			productName = "XMusic (iOS)";
 			productReference = 44E4EE4427DBD3BC00C2803E /* XMusic.app */;
@@ -548,6 +551,7 @@
 				44E4EE7327DBDB7300C2803E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				44E4EE7627DBDCCE00C2803E /* XCRemoteSwiftPackageReference "NeteaseCloudMusicAPI" */,
 				44E4EF3927DBDF2D00C2803E /* XCRemoteSwiftPackageReference "NeumorphismSwiftUI" */,
+				44E4EF4C27DBECF300C2803E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 44E4EE4527DBD3BC00C2803E /* Products */;
 			projectDirPath = "";
@@ -1033,6 +1037,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		44E4EF4C27DBECF300C2803E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1065,6 +1077,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 44E4EF3927DBDF2D00C2803E /* XCRemoteSwiftPackageReference "NeumorphismSwiftUI" */;
 			productName = NeumorphismSwiftUI;
+		};
+		44E4EF4D27DBECF300C2803E /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 44E4EF4C27DBECF300C2803E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 
