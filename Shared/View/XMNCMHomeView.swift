@@ -12,22 +12,23 @@ import ComposableArchitecture
 struct XMNCMHomeView: View {
     let store: Store<XMNCMHomeState, XMNCMHomeAction>
     
-    struct ViewState: Equatable {
-        public var username: String
-        public init(state: XMNCMHomeState) {
-            self.username = state.username
-        }
-    }
-    
     enum ViewAction {
         case NCMHomeButtonTapped
     }
 
     var body: some View {
-        WithViewStore(store.scope(state: ViewState.init, action: XMNCMHomeAction.init)) { viewStore in
-            Text(viewStore.username)
-                .foregroundColor(.mainText)
-        }
+        WithViewStore(store) { viewStore in
+            ZStack {
+                QinBackgroundView()
+                VStack {
+                    QinCoverView(viewStore.state.loginUser?.profile.avatarUrl, style: QinCoverStyle(size: .medium, shape: .rectangle))
+                    if let nicname = viewStore.state.loginUser?.profile.nickname {
+                        Text(nicname)
+                    }
+                }
+            }
+            .foregroundColor(.mainText)
+         }
     }
 }
 
@@ -39,11 +40,11 @@ struct XMNCMHomeView_Previews: PreviewProvider {
 }
 #endif
 
-extension XMNCMHomeAction {
-    init(action: XMNCMHomeView.ViewAction) {
-        switch action {
-        case .NCMHomeButtonTapped:
-            self = .NCMHomeButtonTapped
-        }
-    }
-}
+//extension XMNCMHomeAction {
+//    init(action: XMNCMHomeView.ViewAction) {
+//        switch action {
+//        case .NCMHomeButtonTapped:
+//            self = .NCMHomeButtonTapped
+//        }
+//    }
+//}

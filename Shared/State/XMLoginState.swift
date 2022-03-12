@@ -16,8 +16,8 @@ public struct XMLoginState: Equatable {
     public var loginStatus: Bool = false
     public var isLoginRequesting: Bool = false
     public var isLoginRefreshRequesting: Bool = true
-    @CombineUserStorge(key: .username, container: .group)
-    public var username: String = ""
+    @CombineUserStorge(key: .loginUser, container: .group)
+    public var loginUser: NCMLoginAction.Response? = nil
     public init() {}
 }
 
@@ -59,12 +59,13 @@ public let xmLoginReducer = Reducer<XMLoginState, XMLoginAction, XMLoginEnvironm
     case let .loginResponse(result):
         switch result {
         case .success(let response):
-            state.username = response.account.userName
+            state.loginUser = response
+            state.isLoginRequesting = false
+            return .init(value: .loginSuccess)
         case .failure(let error):
             state.alert = .init(title: TextState(error.localizedDescription), message: nil, dismissButton: .default(TextState("OK"), action: nil))
+            return .none
         }
-        state.isLoginRequesting = false
-        return .init(value: .loginSuccess)
     case .loginRefreshRequest:
         state.isLoginRefreshRequesting = true
         return environment.client.requestPublisher(action: NCMLoginRefreshAction())
@@ -82,7 +83,7 @@ public let xmLoginReducer = Reducer<XMLoginState, XMLoginAction, XMLoginEnvironm
             }
         case .failure(let error):
             state.alert = .init(title: TextState(error.localizedDescription), message: nil, dismissButton: .default(TextState("OK"), action: nil))
-            return .init(value: .loginRequest)
+            return .none
         }
     }
 }

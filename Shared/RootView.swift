@@ -26,20 +26,13 @@ struct RootView: View {
 //                    .navigationViewStyle(.stack)
 //                }
                 CaseLet(state: /AppState.login, action: AppAction.login) { store in
-                    NavigationView {
                     XMLoginView(store: store)
-                    }
-                    .navigationViewStyle(.stack)
                 }
                 CaseLet(state: /AppState.ncmHome, action: AppAction.ncmHome) { store in
-                    NavigationView {
                     XMNCMHomeView(store: store)
-                    }
-                    .navigationViewStyle(.stack)
                 }
             }
         }
-        .navigationViewStyle(.stack)
     }
 }
 

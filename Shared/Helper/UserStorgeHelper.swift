@@ -26,7 +26,6 @@ public struct UserStorgeKey: RawRepresentable, Equatable {
         self.rawValue = rawValue
     }
     
-    public static let username = UserStorgeKey(rawValue: "username")!
     public static let firstLaunched = UserStorgeKey(rawValue: "firstLaunched")!
     public static let likedSongsId = UserStorgeKey(rawValue: "likedSongsId")!
     public static let loginUser = UserStorgeKey(rawValue: "loginUser")!

@@ -11,9 +11,10 @@ import NeteaseCloudMusicAPI
 import SwiftUI
 
 public struct XMNCMHomeState: Equatable {
-    @CombineUserStorge(key: .username, container: .group)
-    public var username: String = ""
-    public init() {}
+    @CombineUserStorge(key: .loginUser, container: .group)
+    public var loginUser: NCMLoginAction.Response? = nil
+    
+    public init() { }
 }
 
 public enum XMNCMHomeAction: Equatable {
