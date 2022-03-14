@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4432F7C327DC7013001CD329 /* XMLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4432F7C227DC7013001CD329 /* XMLaunchView.swift */; };
-		4432F7C427DC7013001CD329 /* XMLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4432F7C227DC7013001CD329 /* XMLaunchView.swift */; };
-		4432F7C627DC721C001CD329 /* XMLaunchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4432F7C527DC721C001CD329 /* XMLaunchState.swift */; };
-		4432F7C727DC721C001CD329 /* XMLaunchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4432F7C527DC721C001CD329 /* XMLaunchState.swift */; };
 		44B6B83127DCEA7F00B10837 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44B6B83027DCEA7F00B10837 /* Launch Screen.storyboard */; };
 		44E4EE4D27DBD3BC00C2803E /* XMusic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE3A27DBD3BC00C2803E /* XMusic.xcdatamodeld */; };
 		44E4EE4E27DBD3BC00C2803E /* XMusic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EE3A27DBD3BC00C2803E /* XMusic.xcdatamodeld */; };
@@ -162,26 +158,9 @@
 		44E4EF4727DBEBD600C2803E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4627DBEBD600C2803E /* Kingfisher */; };
 		44E4EF4927DBEBD900C2803E /* NeteaseCloudMusicAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4827DBEBD900C2803E /* NeteaseCloudMusicAPI */; };
 		44E4EF4B27DBEBDC00C2803E /* NeumorphismSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4A27DBEBDC00C2803E /* NeumorphismSwiftUI */; };
-		44E4EF4E27DBECF300C2803E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 44E4EF4D27DBECF300C2803E /* ComposableArchitecture */; };
-		44E4EF5027DBEF2F00C2803E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF4F27DBEF2F00C2803E /* AppState.swift */; };
-		44E4EF5127DBEF2F00C2803E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF4F27DBEF2F00C2803E /* AppState.swift */; };
-		44E4EF5327DBEF9C00C2803E /* XMLoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5227DBEF9C00C2803E /* XMLoginState.swift */; };
-		44E4EF5427DBEF9C00C2803E /* XMLoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5227DBEF9C00C2803E /* XMLoginState.swift */; };
-		44E4EF5627DBFBCD00C2803E /* XMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5527DBFBCD00C2803E /* XMError.swift */; };
-		44E4EF5727DBFBCD00C2803E /* XMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5527DBFBCD00C2803E /* XMError.swift */; };
-		44E4EF5927DBFFCD00C2803E /* XMLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5827DBFFCD00C2803E /* XMLoginView.swift */; };
-		44E4EF5A27DBFFCD00C2803E /* XMLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5827DBFFCD00C2803E /* XMLoginView.swift */; };
-		44E4EF5C27DC25A500C2803E /* XMNCMHomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5B27DC25A500C2803E /* XMNCMHomeState.swift */; };
-		44E4EF5D27DC25A500C2803E /* XMNCMHomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5B27DC25A500C2803E /* XMNCMHomeState.swift */; };
-		44E4EF5F27DC26EF00C2803E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5E27DC26EF00C2803E /* RootView.swift */; };
-		44E4EF6027DC26EF00C2803E /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF5E27DC26EF00C2803E /* RootView.swift */; };
-		44E4EF6227DC311800C2803E /* XMNCMHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF6127DC311800C2803E /* XMNCMHomeView.swift */; };
-		44E4EF6327DC311800C2803E /* XMNCMHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EF6127DC311800C2803E /* XMNCMHomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4432F7C227DC7013001CD329 /* XMLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLaunchView.swift; sourceTree = "<group>"; };
-		4432F7C527DC721C001CD329 /* XMLaunchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLaunchState.swift; sourceTree = "<group>"; };
 		44B6B83027DCEA7F00B10837 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		44E4EE3B27DBD3BC00C2803E /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		44E4EE3C27DBD3BC00C2803E /* XMusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMusicApp.swift; sourceTree = "<group>"; };
@@ -261,13 +240,6 @@
 		44E4EF3E27DBDF5E00C2803E /* CoreDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		44E4EF4327DBE23000C2803E /* XMusic--macOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "XMusic--macOS--Info.plist"; sourceTree = "<group>"; };
 		44E4EF4427DBE26800C2803E /* XMusic--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "XMusic--iOS--Info.plist"; sourceTree = "<group>"; };
-		44E4EF4F27DBEF2F00C2803E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
-		44E4EF5227DBEF9C00C2803E /* XMLoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLoginState.swift; sourceTree = "<group>"; };
-		44E4EF5527DBFBCD00C2803E /* XMError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMError.swift; sourceTree = "<group>"; };
-		44E4EF5827DBFFCD00C2803E /* XMLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLoginView.swift; sourceTree = "<group>"; };
-		44E4EF5B27DC25A500C2803E /* XMNCMHomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMNCMHomeState.swift; sourceTree = "<group>"; };
-		44E4EF5E27DC26EF00C2803E /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
-		44E4EF6127DC311800C2803E /* XMNCMHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMNCMHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,7 +249,6 @@
 			files = (
 				44E4EE7527DBDB7300C2803E /* Kingfisher in Frameworks */,
 				44E4EE7827DBDCCE00C2803E /* NeteaseCloudMusicAPI in Frameworks */,
-				44E4EF4E27DBECF300C2803E /* ComposableArchitecture in Frameworks */,
 				44E4EF3B27DBDF2D00C2803E /* NeumorphismSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +295,6 @@
 				44E4EEAC27DBDD8800C2803E /* View */,
 				44E4EEC827DBDD9400C2803E /* ViewModel */,
 				44E4EE3A27DBD3BC00C2803E /* XMusic.xcdatamodeld */,
-				44E4EF5E27DC26EF00C2803E /* RootView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -360,16 +330,11 @@
 		44E4EE7927DBDCF500C2803E /* State */ = {
 			isa = PBXGroup;
 			children = (
-				44E4EF4F27DBEF2F00C2803E /* AppState.swift */,
 				44E4EE7A27DBDD3C00C2803E /* XMAppAction.swift */,
 				44E4EE7D27DBDD3C00C2803E /* XMAppCommand.swift */,
 				44E4EE7B27DBDD3C00C2803E /* XMAppError.swift */,
 				44E4EE7C27DBDD3C00C2803E /* XMAppState.swift */,
-				44E4EF5527DBFBCD00C2803E /* XMError.swift */,
-				44E4EF5227DBEF9C00C2803E /* XMLoginState.swift */,
-				44E4EF5B27DC25A500C2803E /* XMNCMHomeState.swift */,
 				44E4EE7E27DBDD3C00C2803E /* XMStore.swift */,
-				4432F7C527DC721C001CD329 /* XMLaunchState.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -411,9 +376,6 @@
 				44E4EEB027DBDD9100C2803E /* QinPlayerCoverView.swift */,
 				44E4EEB427DBDD9100C2803E /* QinSFView.swift */,
 				44E4EEB527DBDD9100C2803E /* QinSongRowView.swift */,
-				44E4EF5827DBFFCD00C2803E /* XMLoginView.swift */,
-				44E4EF6127DC311800C2803E /* XMNCMHomeView.swift */,
-				4432F7C227DC7013001CD329 /* XMLaunchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -529,7 +491,6 @@
 				44E4EE7427DBDB7300C2803E /* Kingfisher */,
 				44E4EE7727DBDCCE00C2803E /* NeteaseCloudMusicAPI */,
 				44E4EF3A27DBDF2D00C2803E /* NeumorphismSwiftUI */,
-				44E4EF4D27DBECF300C2803E /* ComposableArchitecture */,
 			);
 			productName = "XMusic (iOS)";
 			productReference = 44E4EE4427DBD3BC00C2803E /* XMusic.app */;
@@ -590,7 +551,6 @@
 				44E4EE7327DBDB7300C2803E /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				44E4EE7627DBDCCE00C2803E /* XCRemoteSwiftPackageReference "NeteaseCloudMusicAPI" */,
 				44E4EF3927DBDF2D00C2803E /* XCRemoteSwiftPackageReference "NeumorphismSwiftUI" */,
-				44E4EF4C27DBECF300C2803E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = 44E4EE4527DBD3BC00C2803E /* Products */;
 			projectDirPath = "";
@@ -633,10 +593,8 @@
 				44E4EEBA27DBDD9100C2803E /* QinCoverView.swift in Sources */,
 				44E4EED527DBDE3B00C2803E /* SearchViewModel.swift in Sources */,
 				44E4EEC027DBDD9100C2803E /* QinEditButton.swift in Sources */,
-				44E4EF5C27DC25A500C2803E /* XMNCMHomeState.swift in Sources */,
 				44E4EF2727DBDE9700C2803E /* DiscoverPlaylistView.swift in Sources */,
 				44E4EF0327DBDE9700C2803E /* TestView.swift in Sources */,
-				4432F7C327DC7013001CD329 /* XMLaunchView.swift in Sources */,
 				44E4EEBC27DBDD9100C2803E /* QinPlayerCoverView.swift in Sources */,
 				44E4EE7127DBDB4C00C2803E /* AudioSessionManager.swift in Sources */,
 				44E4EEB627DBDD9100C2803E /* QinBackwardButton.swift in Sources */,
@@ -651,7 +609,6 @@
 				44E4EE9A27DBDD6C00C2803E /* String+Extension.swift in Sources */,
 				44E4EF1127DBDE9700C2803E /* CommentView.swift in Sources */,
 				44E4EE9827DBDD6C00C2803E /* JSONHelper.swift in Sources */,
-				44E4EF5327DBEF9C00C2803E /* XMLoginState.swift in Sources */,
 				44E4EF0B27DBDE9700C2803E /* LoginView.swift in Sources */,
 				44E4EE9427DBDD6C00C2803E /* CaseIterable+Extension.swift in Sources */,
 				44E4EE8327DBDD3C00C2803E /* XMAppState.swift in Sources */,
@@ -668,12 +625,9 @@
 				44E4EEC227DBDD9100C2803E /* AVRoutePicker.swift in Sources */,
 				44E4EEC627DBDD9100C2803E /* QinSongRowView.swift in Sources */,
 				44E4EE8727DBDD3C00C2803E /* XMStore.swift in Sources */,
-				4432F7C627DC721C001CD329 /* XMLaunchState.swift in Sources */,
 				44E4EF1B27DBDE9700C2803E /* FetchedArtistDetailView.swift in Sources */,
 				44E4EE6B27DBDB4C00C2803E /* LyricParser.swift in Sources */,
-				44E4EF6227DC311800C2803E /* XMNCMHomeView.swift in Sources */,
 				44E4EEA027DBDD6C00C2803E /* SwiftUI+Extension.swift in Sources */,
-				44E4EF5627DBFBCD00C2803E /* XMError.swift in Sources */,
 				44E4EF3F27DBDF5F00C2803E /* DataManager.swift in Sources */,
 				44E4EF1F27DBDE9700C2803E /* PlayerControlBarView.swift in Sources */,
 				44E4EE9627DBDD6C00C2803E /* URL+Extension.swift in Sources */,
@@ -693,10 +647,8 @@
 				44E4EF3727DBDEA800C2803E /* CommentBarView.swift in Sources */,
 				44E4EF0D27DBDE9700C2803E /* DescriptionView.swift in Sources */,
 				44E4EEFF27DBDE9700C2803E /* QinSearchView.swift in Sources */,
-				44E4EF5027DBEF2F00C2803E /* AppState.swift in Sources */,
 				44E4EE8527DBDD3C00C2803E /* XMAppCommand.swift in Sources */,
 				44E4EF3327DBDE9700C2803E /* ArtistSublistView.swift in Sources */,
-				44E4EF5927DBFFCD00C2803E /* XMLoginView.swift in Sources */,
 				44E4EECF27DBDE3B00C2803E /* LyricViewModel.swift in Sources */,
 				44E4EE5127DBD3BC00C2803E /* ContentView.swift in Sources */,
 				44E4EE9227DBDD6C00C2803E /* Published+Extension.swift in Sources */,
@@ -704,7 +656,6 @@
 				44E4EF4127DBDF5F00C2803E /* CoreDataModel.swift in Sources */,
 				44E4EE6F27DBDB4C00C2803E /* QinSong.swift in Sources */,
 				44E4EEC427DBDD9100C2803E /* QinSFView.swift in Sources */,
-				44E4EF5F27DC26EF00C2803E /* RootView.swift in Sources */,
 				44E4EF0927DBDE9700C2803E /* HomeView.swift in Sources */,
 				44E4EF0527DBDE9700C2803E /* CommonGridItemView.swift in Sources */,
 				44E4EE9C27DBDD6C00C2803E /* BidirectionalCollection+Extension.swift in Sources */,
@@ -718,13 +669,11 @@
 				44E4EE5027DBD3BC00C2803E /* XMusicApp.swift in Sources */,
 				44E4EEB927DBDD9100C2803E /* QinBackgroundView.swift in Sources */,
 				44E4EE9F27DBDD6C00C2803E /* Color+Extension.swift in Sources */,
-				44E4EF6327DC311800C2803E /* XMNCMHomeView.swift in Sources */,
 				44E4EEBB27DBDD9100C2803E /* QinCoverView.swift in Sources */,
 				44E4EED627DBDE3B00C2803E /* SearchViewModel.swift in Sources */,
 				44E4EEC127DBDD9100C2803E /* QinEditButton.swift in Sources */,
 				44E4EF2827DBDE9700C2803E /* DiscoverPlaylistView.swift in Sources */,
 				44E4EF0427DBDE9700C2803E /* TestView.swift in Sources */,
-				44E4EF5127DBEF2F00C2803E /* AppState.swift in Sources */,
 				44E4EEBD27DBDD9100C2803E /* QinPlayerCoverView.swift in Sources */,
 				44E4EEB727DBDD9100C2803E /* QinBackwardButton.swift in Sources */,
 				44E4EF1627DBDE9700C2803E /* LyricView.swift in Sources */,
@@ -736,7 +685,6 @@
 				44E4EF2E27DBDE9700C2803E /* FetchedPlaylistDetailView.swift in Sources */,
 				44E4EE6227DBD46200C2803E /* DataModel.xcdatamodeld in Sources */,
 				44E4EE9B27DBDD6C00C2803E /* String+Extension.swift in Sources */,
-				44E4EF5427DBEF9C00C2803E /* XMLoginState.swift in Sources */,
 				44E4EF1227DBDE9700C2803E /* CommentView.swift in Sources */,
 				44E4EE9927DBDD6C00C2803E /* JSONHelper.swift in Sources */,
 				44E4EF0C27DBDE9700C2803E /* LoginView.swift in Sources */,
@@ -760,12 +708,8 @@
 				44E4EEA127DBDD6C00C2803E /* SwiftUI+Extension.swift in Sources */,
 				44E4EF4027DBDF5F00C2803E /* DataManager.swift in Sources */,
 				44E4EF2027DBDE9700C2803E /* PlayerControlBarView.swift in Sources */,
-				44E4EF6027DC26EF00C2803E /* RootView.swift in Sources */,
-				4432F7C727DC721C001CD329 /* XMLaunchState.swift in Sources */,
 				44E4EE9727DBDD6C00C2803E /* URL+Extension.swift in Sources */,
-				44E4EF5A27DBFFCD00C2803E /* XMLoginView.swift in Sources */,
 				44E4EF1427DBDE9700C2803E /* PlayingNowButtonView.swift in Sources */,
-				44E4EF5727DBFBCD00C2803E /* XMError.swift in Sources */,
 				44E4EF2A27DBDE9700C2803E /* PlaylistManageView.swift in Sources */,
 				44E4EED427DBDE3B00C2803E /* CommentViewModel.swift in Sources */,
 				44E4EE8027DBDD3C00C2803E /* XMAppAction.swift in Sources */,
@@ -777,9 +721,7 @@
 				44E4EF0227DBDE9700C2803E /* SubedPlaylistView.swift in Sources */,
 				44E4EF3027DBDE9700C2803E /* PlaylistSongsManageView.swift in Sources */,
 				44E4EEDA27DBDE3B00C2803E /* PlaylistViewModel.swift in Sources */,
-				4432F7C427DC7013001CD329 /* XMLaunchView.swift in Sources */,
 				44E4EF3827DBDEA800C2803E /* CommentBarView.swift in Sources */,
-				44E4EF5D27DC25A500C2803E /* XMNCMHomeState.swift in Sources */,
 				44E4EF0E27DBDE9700C2803E /* DescriptionView.swift in Sources */,
 				44E4EF0027DBDE9700C2803E /* QinSearchView.swift in Sources */,
 				44E4EE8627DBDD3C00C2803E /* XMAppCommand.swift in Sources */,
@@ -1097,14 +1039,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		44E4EF4C27DBECF300C2803E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1137,11 +1071,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 44E4EF3927DBDF2D00C2803E /* XCRemoteSwiftPackageReference "NeumorphismSwiftUI" */;
 			productName = NeumorphismSwiftUI;
-		};
-		44E4EF4D27DBECF300C2803E /* ComposableArchitecture */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 44E4EF4C27DBECF300C2803E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
 

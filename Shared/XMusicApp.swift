@@ -15,15 +15,9 @@ struct XMusicApp: App {
     #if canImport(UIKit)
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate: AppDelegate
     #endif
-//    @StateObject var store = XMStore.shared
-//    @StateObject var player = Player.shared
+    @StateObject var store = XMStore.shared
+    @StateObject var player = Player.shared
     let context = DataManager.shared.context()
-    
-    let store = Store(
-      initialState: AppState(),
-      reducer: appReducer,
-      environment: AppEnvironment()
-    )
 
 //    let persistenceController = PersistenceController.shared
     init() {
@@ -33,27 +27,26 @@ struct XMusicApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            RootView(store: store)
-//            ContentView()
-//                .onAppear {
-//                    store.dispatch(.loginRefreshRequest)
-//                }
-//                .environmentObject(store)
-//                .environmentObject(player)
+            ContentView()
+                .onAppear {
+                    store.dispatch(.loginRefreshRequest)
+                }
+                .environmentObject(store)
+                .environmentObject(player)
                 .environment(\.managedObjectContext, context)
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-//                .onChange(of: scenePhase) { newValue in
-//                    switch newValue {
-//                    case .active:
-//                        break
-//                    case .background:
-//                        break
-//                    case .inactive:
-//                        break
-//                    @unknown default:
-//                        break
-//                    }
-//                }
+                .onChange(of: scenePhase) { newValue in
+                    switch newValue {
+                    case .active:
+                        break
+                    case .background:
+                        break
+                    case .inactive:
+                        break
+                    @unknown default:
+                        break
+                    }
+                }
         }
     }
 }
