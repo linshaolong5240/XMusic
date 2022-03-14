@@ -106,8 +106,8 @@
 		44E4EF0827DBDE9700C2803E /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE627DBDE9600C2803E /* PlayerView.swift */; };
 		44E4EF0927DBDE9700C2803E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE727DBDE9600C2803E /* HomeView.swift */; };
 		44E4EF0A27DBDE9700C2803E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE727DBDE9600C2803E /* HomeView.swift */; };
-		44E4EF0B27DBDE9700C2803E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE827DBDE9600C2803E /* LoginView.swift */; };
-		44E4EF0C27DBDE9700C2803E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE827DBDE9600C2803E /* LoginView.swift */; };
+		44E4EF0B27DBDE9700C2803E /* XMLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE827DBDE9600C2803E /* XMLoginView.swift */; };
+		44E4EF0C27DBDE9700C2803E /* XMLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE827DBDE9600C2803E /* XMLoginView.swift */; };
 		44E4EF0D27DBDE9700C2803E /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE927DBDE9600C2803E /* DescriptionView.swift */; };
 		44E4EF0E27DBDE9700C2803E /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEE927DBDE9600C2803E /* DescriptionView.swift */; };
 		44E4EF0F27DBDE9700C2803E /* RecommendPlaylistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4EEEA27DBDE9600C2803E /* RecommendPlaylistView.swift */; };
@@ -214,7 +214,7 @@
 		44E4EEE527DBDE9600C2803E /* CommonGridItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonGridItemView.swift; sourceTree = "<group>"; };
 		44E4EEE627DBDE9600C2803E /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		44E4EEE727DBDE9600C2803E /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		44E4EEE827DBDE9600C2803E /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		44E4EEE827DBDE9600C2803E /* XMLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XMLoginView.swift; sourceTree = "<group>"; };
 		44E4EEE927DBDE9600C2803E /* DescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		44E4EEEA27DBDE9600C2803E /* RecommendPlaylistView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendPlaylistView.swift; sourceTree = "<group>"; };
 		44E4EEEB27DBDE9600C2803E /* CommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
@@ -376,6 +376,7 @@
 				44E4EEB027DBDD9100C2803E /* QinPlayerCoverView.swift */,
 				44E4EEB427DBDD9100C2803E /* QinSFView.swift */,
 				44E4EEB527DBDD9100C2803E /* QinSongRowView.swift */,
+				44E4EEE827DBDE9600C2803E /* XMLoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -426,7 +427,6 @@
 				44E4EEF427DBDE9600C2803E /* FetchedMVDetailView.swift */,
 				44E4EEF927DBDE9700C2803E /* FetchedPlaylistDetailView.swift */,
 				44E4EEE727DBDE9600C2803E /* HomeView.swift */,
-				44E4EEE827DBDE9600C2803E /* LoginView.swift */,
 				44E4EEED27DBDE9600C2803E /* LyricView.swift */,
 				44E4EEF227DBDE9600C2803E /* PlayerControlBarView.swift */,
 				44E4EEE627DBDE9600C2803E /* PlayerView.swift */,
@@ -609,7 +609,7 @@
 				44E4EE9A27DBDD6C00C2803E /* String+Extension.swift in Sources */,
 				44E4EF1127DBDE9700C2803E /* CommentView.swift in Sources */,
 				44E4EE9827DBDD6C00C2803E /* JSONHelper.swift in Sources */,
-				44E4EF0B27DBDE9700C2803E /* LoginView.swift in Sources */,
+				44E4EF0B27DBDE9700C2803E /* XMLoginView.swift in Sources */,
 				44E4EE9427DBDD6C00C2803E /* CaseIterable+Extension.swift in Sources */,
 				44E4EE8327DBDD3C00C2803E /* XMAppState.swift in Sources */,
 				44E4EEA627DBDD7D00C2803E /* UserStorgeHelper.swift in Sources */,
@@ -687,7 +687,7 @@
 				44E4EE9B27DBDD6C00C2803E /* String+Extension.swift in Sources */,
 				44E4EF1227DBDE9700C2803E /* CommentView.swift in Sources */,
 				44E4EE9927DBDD6C00C2803E /* JSONHelper.swift in Sources */,
-				44E4EF0C27DBDE9700C2803E /* LoginView.swift in Sources */,
+				44E4EF0C27DBDE9700C2803E /* XMLoginView.swift in Sources */,
 				44E4EE9527DBDD6C00C2803E /* CaseIterable+Extension.swift in Sources */,
 				44E4EE8427DBDD3C00C2803E /* XMAppState.swift in Sources */,
 				44E4EEA727DBDD7D00C2803E /* UserStorgeHelper.swift in Sources */,

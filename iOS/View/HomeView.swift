@@ -58,7 +58,7 @@ struct HomeView: View {
                     }
                     .edgesIgnoringSafeArea(.bottom)
                 }else {
-                    LoginView()
+                    XMLoginView()
                 }
             }
             .onTapGesture {
