@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import ComposableArchitecture
 
 @main
 struct XMusicApp: App {
